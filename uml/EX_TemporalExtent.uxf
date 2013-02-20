@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>70</x>
+      <y>200</y>
+      <w>480</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>EX_TemporalExtent
+--
++extent: TM_Primitive
++currency [0..1]: MD_CurrencyTypeCode
++temporalAggregation [0..1]: MD_TemporalAggregationUnitCode
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>280</x>
+      <y>320</y>
+      <w>270</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;CodeList&gt;&gt;
+MD_TemporalAggregationUnitCode
+--
+day
+multi-day
+week
+month
+multi-month
+year
+multi-year
+none</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>160</x>
+      <y>50</y>
+      <w>270</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DataType&gt;&gt;
+EX_Extent
+--
++description [0..1]: CharacterString
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>210</x>
+      <y>90</y>
+      <w>156</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
+r2=+temporalElement
+m2=    0..*</panel_attributes>
+    <additional_attributes>80;30;80;110</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>40</x>
+      <y>320</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;CodeList&gt;&gt;
+MD_CurrencyTypeCode
+--
+mostRecent
+historical
+predicted
+unknown</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

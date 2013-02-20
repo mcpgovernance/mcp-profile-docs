@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>600</x>
+      <y>0</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>190</x>
+      <y>70</y>
+      <w>320</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>MD_Metadata
+(from ISO Metadata entity set information)
+--
++revisionDate: DateTime</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

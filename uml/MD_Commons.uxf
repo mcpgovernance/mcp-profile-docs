@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>11</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>308</x>
+      <y>22</y>
+      <w>352</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>MD_Metadata
+(from Metadata entity set information)
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>374</x>
+      <y>44</y>
+      <w>194</w>
+      <h>142</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
+m2=     0..*
+r2=+metadataConstraints</panel_attributes>
+    <additional_attributes>99;33;99;121</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>143</x>
+      <y>165</y>
+      <w>352</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>MD_Constraints
+--
++useLimitation [0..*]: CharacterString
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>275</x>
+      <y>187</y>
+      <w>54</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>33;33;33;99</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>99</x>
+      <y>253</y>
+      <w>230</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>33;33;209;33</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>275</x>
+      <y>253</y>
+      <w>230</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>33;33;209;33</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>451</x>
+      <y>253</y>
+      <w>54</w>
+      <h>87</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>33;33;33;66</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>242</x>
+      <y>319</y>
+      <w>418</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>MD_Commons
+--
++jurisdictionLink: URL
++licenseLink: URL
++imageLink: URL
++licenseName: CharacterString
++attributionConstraints [0..*]: CharacterString
++derivativeConstraints [0..*]: CharacterString
++commercialUseConstraints [0..*]: CharacterString
++collectiveWorksConstraints [0..*]: CharacterString
++otherConstraints [0..*]: CharacterString
++commonsType: CommonsTypeCode
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>44</x>
+      <y>550</y>
+      <w>231</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enumeration&gt;&gt;
+CommonsTypeCode
+--
+Creative Commons
+Data Commons</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>44</x>
+      <y>22</y>
+      <w>253</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+MD_Identification
+(from Identification Information)
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>77</x>
+      <y>66</y>
+      <w>188</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
+m2=     0..*
+r2=+resourceConstraints</panel_attributes>
+    <additional_attributes>99;33;99;99</additional_attributes>
+  </element>
+</diagram>
