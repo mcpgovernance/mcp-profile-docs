@@ -75,7 +75,7 @@ Notice: For any reuse or distribution, you must make clear to others the license
 
 You may obtain a copy of the License at `Creative Commons Attribution-ShareAlike 3.0 Unported License <http://creativecommons.org/licenses/by-sa/3.0/>`_
 
-The document is written in reStructuredText format for consistency and portability.
+The document is written in reStructuredText format for consistency and portability. You can download the source reStructuredText for this documentation from the git repository at https://github.com/mcpgovernance/mcp-profile-docs.
 
 Author and Reference Information
 --------------------------------
