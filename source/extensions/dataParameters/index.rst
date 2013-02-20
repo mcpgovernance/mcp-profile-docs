@@ -105,7 +105,7 @@ An XML example of the data parameter package:
               </mcp:name> 
               <mcp:type>
                 <mcp:DP_TypeCode 
-            codeList="http://bluenet3.antcrc.utas.edu.au/mcp/resources/Codelist/gmxCodelists.xml#DP_TypeCode"
+            codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/resources/Codelist/gmxCodelists.xml#DP_TypeCode"
             codeListValue="longName">longName</mcp:DP_TypeCode> 
               </mcp:type> 
               <mcp:usedInDataset>

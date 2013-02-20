@@ -58,12 +58,12 @@ An XML fragment showing an example of the mcp:EX_TemporalExtent element.
       </gmd:extent>
       <mcp:currency>
         <mcp:MD_CurrencyTypeCode 
-         codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/(...)/gmxCodelists.xml#MD_CurrencyTypeCode" 
+         codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/resources/Codelist/gmxCodelists.xml#MD_CurrencyTypeCode" 
          codeListValue="historical">historical</mcp:MD_CurrencyTypeCode>
       </mcp:currency>
       <mcp:temporalAggregation>
         <mcp:MD_TemporalAggregationUnitCode 
-         codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/(...)/gmxCodelists.xml#MD_TemporalAggregationUnitCode" 
+         codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/resources/Codelist/gmxCodelists.xml#MD_TemporalAggregationUnitCode" 
          codeListValue="week">week</mcp:MD_TemporalAggregationUnitCode>
       </mcp:temporalAggregation>
     </mcp:EX_TemporalExtent>
