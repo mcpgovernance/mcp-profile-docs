@@ -42,17 +42,17 @@ m2=     0..*</panel_attributes>
 dwc::Taxon
 (see http://rs.tdwg.org/dwc/terms)
 --
-+dwc::taxonID: dwc::nonEmptyString
-+dwc::scientificName: xs::string
-+dwc::vernacularName: xs::string
-+dwc::kingdom: xs::string
-+dwc::phylum: xs::string
-+dwc::class: xs:string
-+dwc::order: xs::string
-+dwc::family: xs::string
-+dwc::genus: xs::string
-+dwc::specificEpithet: xs::string
-+dwc::scientificNameAuthorship: xs::string 
++dwc::taxonID [0..1]: dwc::nonEmptyString
++dwc::scientificName [0..1]: xs::string
++dwc::vernacularName [0..1]: xs::string
++dwc::kingdom [0..1]: xs::string
++dwc::phylum [0..1]: xs::string
++dwc::class [0..1]: xs:string
++dwc::order [0..1]: xs::string
++dwc::family [0..1]: xs::string
++dwc::genus [0..1]: xs::string
++dwc::specificEpithet [0..1]: xs::string
++dwc::scientificNameAuthorship [0..1]: xs::string 
 </panel_attributes>
     <additional_attributes/>
   </element>
