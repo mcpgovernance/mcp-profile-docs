@@ -44,7 +44,7 @@ dwc::Taxon
 --
 +dwc::taxonID: dwc::nonEmptyString
 +dwc::scientificName: xs::string
-+dwc::vernacularName [1..*]: xs::string
++dwc::vernacularName [0..*]: xs::string
 +dwc::kingdom: xs::string
 +dwc::phylum: xs::string
 +dwc::class: xs:string
