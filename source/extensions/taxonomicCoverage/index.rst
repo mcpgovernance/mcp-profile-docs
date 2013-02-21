@@ -172,7 +172,7 @@ It would be possible to develop a complete set of elements to hold the taxonomic
 - the MCP governance committee would have to develop these elements and maintain them
 - mappings from DwC, TCS and other syntaxes would need to be developed and maintained by the MCP governance committee and/or by members of the marine community
 
-Instead, it seems preferable to hold this domain knowledge in one of the chosen schemas (DwC) and embed the container element for that knowledge (dwc:Taxon) into the MCP. The advantages of this approach are:
+Instead, it seems preferable to hold this domain knowledge in one of the chosen schemas (DwC) and embed the container element for that knowledge (dwc:Taxon) in the MCP. The advantages of this approach are:
 
 - at least some of the services provide taxonomic info in DwC already - these can be included with little or no additional work
 - mappings from other taxonomic schemas to DwC have already been or are already being developed within the domain hopefully by domain experts - this body of work can be used directly with little or no modification and maintenance by the marine community
