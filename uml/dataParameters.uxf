@@ -52,7 +52,7 @@ m2=     0..1</panel_attributes>
       <w>130</w>
       <h>120</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
 r2=+dataParameter
 m2=     0..*</panel_attributes>
     <additional_attributes>70;30;70;100</additional_attributes>
