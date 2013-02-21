@@ -35,7 +35,7 @@ Data Dictionary
 .. index:: mcp:parameterDescription
 
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
-No.  Name/Role Name               Definition                                                                            Condition/Obligation      Max. Occurrence  Data Type                           Domain
+No.  Name/Role Name               Definition                                                                            Condition/ Obligation     Max. Occurrence  Data Type                           Domain
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 940  DP_DataParameters            Container for description of data set data parameters                                 Note 1                    Note 2           Aggregated Class                    Line 68                        
 941  DP_DataParameter             Container for description of a data set parameter                                     Note 1                    Note 2           Class                               Lines 942-946
@@ -46,6 +46,8 @@ No.  Name/Role Name               Definition                                    
 946  parameterDescription         Parameter Description                                                                 O                         1                CharacterString                     FreeText
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 
+.. include:: ../common_notes.rst
+
 .. index:: mcp:name
 .. index:: mcp:type
 .. index:: mcp:vocabularyListUrl
@@ -55,7 +57,7 @@ No.  Name/Role Name               Definition                                    
 .. index:: mcp:DP_TypeCode
 
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
-No.  Name/Role Name               Definition                                                                            Condition/Obligation      Max. Occurrence  Data Type                           Domain
+No.  Name/Role Name               Definition                                                                            Condition/ Obligation     Max. Occurrence  Data Type                           Domain
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 947  DP_InfoType                  Parameter Name or Unit Information                                                    Note 1                    Note 2           Class <<DataType>>                  Lines 948-953
 948  name                         Name of Parameter or Unit (depending on parent)                                       M                         1                CharacterString                     FreeText
@@ -65,6 +67,8 @@ No.  Name/Role Name               Definition                                    
 952  vocabularyListVersion        Version of the parameter/unit vocabulary list/service that includes this name         O                         1                CharacterString                     FreeText
 953  localDefinition              Definition of the parameter/unit name if not available from vocabulary list/service   O                         1                CharacterString                     FreeText
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
+
+.. include:: ../common_notes.rst
 
 XML Example
 -----------

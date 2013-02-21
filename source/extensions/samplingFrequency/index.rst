@@ -22,7 +22,7 @@ Data Dictionary
 .. index:: gmd:MD_MaintenanceFrequencyCode
 
 ===  =================  ==========================================================  ======================  ===============  ============  ==========================================
-No.  Name/Role Name     Definition                                                  Condition/Obligation    Max. Occurrence  Data Type     Domain
+No.  Name/Role Name     Definition                                                  Condition/ Obligation   Max. Occurrence  Data Type     Domain
 ===  =================  ==========================================================  ======================  ===============  ============  ==========================================
 930  samplingFrequency  Describes the frequency with which the resource is sampled  O                       1                Class         MD_MaintenanceFrequencyCode (B.5.18)
 ===  =================  ==========================================================  ======================  ===============  ============  ==========================================

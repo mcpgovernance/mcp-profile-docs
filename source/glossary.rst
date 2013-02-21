@@ -15,16 +15,9 @@ Glossary
         Catalog Service for the Web. The OGC Catalog Service defines common interfaces
         to discover, browse, and query metadata about data, services, and other potential resources.
 
-    DC
-        The Dublin Core metadata element set is a standard for cross-domain
-        information resource description. It provides a simple and standardised
-        set of conventions for describing things online in ways that make them easier to find.
-    
-    FGDC
-        The Federal Geographic Data Committee (FGDC) is an interagency committee
-        that promotes the coordinated development, use, sharing, and dissemination of
-        geospatial data on a national basis in the USA. See http://www.fgdc.gov 
-    
+    DwC
+        The Darwin Core is designed to facilitate the exchange of information about the geographic occurrence of organisms and the physical existence of biotic specimens in collections. Extensions to the Darwin Core provide a mechanism to share additional information, which may be discipline-specific, or beyond the commonly agreed upon scope of the Darwin Core itself. The Darwin Core and its extensions are minimally restrictive of information content by design, since doing so would render the standard useless for the implementation of data quality tools. http://rs.tdwg.org/dwc/terms/index.htm
+
     GeoNetwork
         GeoNetwork opensource is a standards based, Free and Open Source catalog
         application to manage spatially referenced resources through the web. There are implementations of the MCP (versions 1.4 and 1.5-experimental) available as plugin schemas for GeoNetwork version 2.8.0. GeoNetwork version 2.8.0 can be downloaded from http://geonetwork-opensource.org

@@ -32,7 +32,7 @@ This table makes use of lines 67-68 from table B.2.3 (Constraint information) in
 .. index:: mcp:commonsType
 
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
-No.  Name/Role Name               Definition                                                                            Condition/Obligation      Max. Occurrence  Data Type                           Domain
+No.  Name/Role Name               Definition                                                                            Condition/ Obligation     Max. Occurrence  Data Type                           Domain
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 67   MD_Constraints               Restrictions on the access and use of a resource or metadata                          Note 1                    Note 2           Aggregated Class                    Line 68                        
 68   useLimitation                Limitation affecting fitness for use of the resource or metadata                      O                         N                CharacterString                     FreeText
@@ -48,6 +48,8 @@ No.  Name/Role Name               Definition                                    
 910  otherConstraints             Any other constraint not captured specific constraint fields                          O                         N                CharacterString                     FreeText
 911  commonsType                  Type of commons licensing scheme described                                            M                         1                Enumeration                         CommonsTypeCode <<Enumeration>>
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
+
+.. include:: ../common_notes.rst
 
 XML Example
 -----------

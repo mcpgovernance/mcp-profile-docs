@@ -21,7 +21,7 @@ Data Dictionary
 .. index:: mcp:revisionDate
 
 ===  =================  ==============================================  ======================  ===============  ============  ==========================
-No.  Name/Role Name     Definition                                      Condition/Obligation    Max. Occurrence  Data Type     Domain
+No.  Name/Role Name     Definition                                      Condition/ Obligation   Max. Occurrence  Data Type     Domain
 ===  =================  ==============================================  ======================  ===============  ============  ==========================
 900  revisionDate       date and time that the metadata was revised     M                       1                Class         DateTime (ISO19115 B.4.2)
 ===  =================  ==============================================  ======================  ===============  ============  ==========================

@@ -25,13 +25,15 @@ This table makes use of lines 350-351 from table B.3.1.2 (Temporal extent inform
 .. index:: mcp:TemporalAggregationUnitCode
 
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ==========================================
-No.  Name/Role Name               Definition                                                                            Condition/Obligation      Max. Occurrence  Data Type                           Domain
+No.  Name/Role Name               Definition                                                                            Condition/ Obligation     Max. Occurrence  Data Type                           Domain
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ==========================================
 350  EX_TemporalExtent            Time period covered by the content of the dataset or metadata subject                 Note 1                    Note 2           Aggregated Class (EX_Extent)        Lines 351 & 920-921             
 351  extent                       Date and time for the content of the dataset or metadata subject                      M                         1                Class                               TM_Primitive (B.4.5) 
 920  currency                     Temporal currency for the dataset or metadata subject                                 O                         1                Class                               :ref:`MD_CurrencyTypeCode` <<CodeList>>
 921  temporalAggregation          Temporal aggregation for the dataset or metadata subject                              O                         1                Class                               :ref:`MD_TemporalAggregationUnitCode` <<CodeList>
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ==========================================
+
+.. include:: ../common_notes.rst
 
 XML Example
 -----------
