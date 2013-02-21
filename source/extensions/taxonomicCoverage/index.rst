@@ -138,17 +138,12 @@ Recommended XML syntax
 
 It is recommended that for the present purpose, an XML syntax endorsed by the Taxonomic Databases Working Group TDWG (http://www.tdwg.org/) is utilised. There are 2 candidate schemas: Taxon Concept Schema or TCS (http://www.tdwg.org/standards/117/), ratified 2005, and Darwin Core or DwC (http://www.tdwg.org/standards/450/), ratified 2009. (A third one, ABCD, http://www.tdwg.org/standards/115/ is also available but even more complex and will not be discussed further). An examination of both TCS and Darwin Core reveals that Darwin Core is a considerably less complex method for information exchange than TCS, in particular with regard to relations between scientific names and common names, and a scientific name and its parents in a hierarchy; for both the latter situations, DwC permits the use of a single taxon instance to express all the required information, whereas TCS requires the establishment of a separate name instance and identifier for every name (typically 8 per taxon including all ranks plus a single common name) plus separate expression of relationships between them. The only drawbacks of Darwin Core at this time appear to be the apparent current restriction to a single common name per taxon, which would not seem to be a critical omission for the present purpose; to go to the complexity of TCS just for this feature would seem to be too onerous a step in this case.
 
-Here then is a representation of the example taxon “Physeter macrocephalus” (sperm whale) using DwC XML syntax (current best effort, following usage notes at http://rs.tdwg.org/dwc/terms/) and information sourced from AFD in this instance; Catalogue of Life or WoRMS would be alternative sources if not found in the preceding source (note also, each of these uses its own preferred schema at this time so a degree of translation will be required). It also appears that the order of terms within every <Taxon>…</Taxon>  element is not important.
+Here then is a representation of the example taxon “Physeter macrocephalus” (sperm whale) using DwC XML syntax (current best effort, following usage notes at http://rs.tdwg.org/dwc/terms/) and information sourced from AFD in this instance; Catalogue of Life or WoRMS would be alternative sources if not found in the preceding source (note also, each of these uses its own preferred schema at this time so a degree of translation using XSLT will be required).
 
 :: 
 
     <dwc:Taxon xmlns:dwc="http://rs.tdwg.org/dwc/terms/>
       <dwc:taxonID>urn:lsid:biodiversity.org.au:afd.taxon:e2705e7a-a83c-4d04-87d3-b793e79671d7</dwc:taxonID>
-      <dwc:nameAccordingToID> 
-       <!-- this is supposed to be an identifier for the vocabulary or 
-       printed resource used, unclear as yet what format this should take; 
-       or possibly could insert the URL for the name instance here --> 
-      </dwc:nameAccordingToID >
       <dwc:scientificName>Physeter macrocephalus Linnaeus, 1758</dwc:scientificName>
       <dwc:vernacularName>Sperm Whale</dwc:vernacularName>
       <dwc:kingdom>Animalia</dwc:kingdom>
