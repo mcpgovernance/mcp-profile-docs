@@ -215,9 +215,9 @@ No.  Name/Role Name               Definition                                    
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 972  TC_Taxon                     Container for description of taxonomic data                                           Note 1                    Note 2           Aggregated Class                    Lines 973-976                    
 973  taxonInfo                    Taxonomic Information                                                                 M                         N                Class                               dwc::Taxon  
-974  vocabularyListUrl            URL of vocabulary service providing Taxonomic information                             O                         1                Class                               URL                
+974  vocabularyListUrl            URL of vocabulary service or taxonomic ID resolver for resolving dwc::taxonID         O                         1                Class                               URL                
 975  vocabularyListAuthority      Citation of vocabulary service providing Taxonomic Information                        O                         1                Class                               CI_Citation        
-976  presentationUrl              URL of HTML presentation of Taxonomic Information                                     O                         1                Class                               URL                
+976  presentationUrl              URL of HTML presentation of dwc::taxonID                                              O                         1                Class                               URL                
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 
 .. include:: ../common_notes.rst
@@ -239,17 +239,17 @@ No.  Name/Role Name               Definition                                    
 No.  Name                            Definition                                                                                                                                                                                                                                                                                                  Oblig.   Max Occ  Data Type                           Domain
 ===  ==============================  ==========================================================================================================================================================================================================================================================================================================  =======  =======  ==================================  ===============================
 980  dwc::Taxon                      Darwin Core Container for Taxonomic Information                                                                                                                                                                                                                                                             Note 1   Note 2   <<DataType>>                        981-991                        
-981  dwc::taxonID                    An identifier for the set of taxon information (data associated with the Taxon class). May be a global unique identifier or an identifier specific to the data set. Examples: "8fa58e08-08de-4ac1-b69c-1235340b7001", "32567", "http://species.gbif.org/abies_alba_1753", "urn:lsid:gbif.org:usages:32567"  O        1        dwc::nonEmptyString                 URI
-982  dwc::scientificName             The full scientific name, with authorship and date information if known. When forming part of an Identification, this should be the name in lowest level taxonomic rank that can be determined. Examples: Coleoptera" (order),  "Ctenomys sociabilis" (genus + specificEpithet)                             0        1        xs::string                          FreeText
-983  dwc::vernacularName             A common or vernacular name. Example: "Andean Condor", "Condor Andino", "American Eagle", "Gänsegeier"                                                                                                                                                                                                      0        1        xs::string                          FreeText
-984  dwc::kingdom                    The full scientific name of the kingdom in which the taxon is classified. Example: "Animalia", "Plantae"                                                                                                                                                                                                    0        1        xs::string                          FreeText
-985  dwc::phylum                     The full scientific name of the phylum or division in which the taxon is classified. Example: "Chordata" (phylum), "Bryophyta" (division)                                                                                                                                                                   0        1        xs::string                          FreeText
-986  dwc::class                      The full scientific name of the class in which the taxon is classified. Example: "Mammalia", "Hepaticopsida".                                                                                                                                                                                               0        1        xs::string                          FreeText
-987  dwc::order                      The full scientific name of the order in which the taxon is classified. Example: "Carnivora", "Monocleales"                                                                                                                                                                                                 0        1        xs::string                          FreeText
-988  dwc::family                     The full scientific name of the family in which the taxon is classified. Example: "Felidae", "Monocleaceae"                                                                                                                                                                                                 0        1        xs::string                          FreeText
-989  dwc::genus                      The full scientific name of the genus in which the taxon is classified. Example: "Puma", "Monoclea"                                                                                                                                                                                                         0        1        xs::string                          FreeText
-990  dwc::specificEpithet            The name of the first or species epithet of the scientificName. Example: "concolor", "oxyadenia", "sayi".                                                                                                                                                                                                   0        1        xs::string                          FreeText
-991  dwc::scientificNameAuthorship   The authorship information for the scientificName. Example: Linnaeus, 1758                                                                                                                                                                                                                                  0        1        xs::string                          FreeText
+981  dwc::taxonID                    An identifier for the set of taxon information (data associated with the Taxon class). May be a global unique identifier or an identifier specific to the data set. Examples: "8fa58e08-08de-4ac1-b69c-1235340b7001", "32567", "http://species.gbif.org/abies_alba_1753", "urn:lsid:gbif.org:usages:32567"  M        1        dwc::nonEmptyString                 URI
+982  dwc::scientificName             The full scientific name, with authorship and date information if known. When forming part of an Identification, this should be the name in lowest level taxonomic rank that can be determined. Examples: Coleoptera" (order),  "Ctenomys sociabilis" (genus + specificEpithet)                             M        1        xs::string                          FreeText
+983  dwc::vernacularName             A common or vernacular name. Example: "Andean Condor", "Condor Andino", "American Eagle", "Gänsegeier"                                                                                                                                                                                                      M        N        xs::string                          FreeText
+984  dwc::kingdom                    The full scientific name of the kingdom in which the taxon is classified. Example: "Animalia", "Plantae"                                                                                                                                                                                                    M        1        xs::string                          FreeText
+985  dwc::phylum                     The full scientific name of the phylum or division in which the taxon is classified. Example: "Chordata" (phylum), "Bryophyta" (division)                                                                                                                                                                   M        1        xs::string                          FreeText
+986  dwc::class                      The full scientific name of the class in which the taxon is classified. Example: "Mammalia", "Hepaticopsida".                                                                                                                                                                                               M        1        xs::string                          FreeText
+987  dwc::order                      The full scientific name of the order in which the taxon is classified. Example: "Carnivora", "Monocleales"                                                                                                                                                                                                 M        1        xs::string                          FreeText
+988  dwc::family                     The full scientific name of the family in which the taxon is classified. Example: "Felidae", "Monocleaceae"                                                                                                                                                                                                 M        1        xs::string                          FreeText
+989  dwc::genus                      The full scientific name of the genus in which the taxon is classified. Example: "Puma", "Monoclea"                                                                                                                                                                                                         M        1        xs::string                          FreeText
+990  dwc::specificEpithet            The name of the first or species epithet of the scientificName. Example: "concolor", "oxyadenia", "sayi".                                                                                                                                                                                                   M        1        xs::string                          FreeText
+991  dwc::scientificNameAuthorship   The authorship information for the scientificName. Example: Linnaeus, 1758                                                                                                                                                                                                                                  M        N        xs::string                          FreeText
 ===  ==============================  ==========================================================================================================================================================================================================================================================================================================  =======  =======  ==================================  ===============================
 
 .. include:: ../common_notes.rst
@@ -281,11 +281,42 @@ Example 1 - embedded DwC
          <dwc:scientificNameAuthorship>Linnaeus, 1758</dwc:scientificNameAuthorship>
        </dwc:Taxon>
      </mcp:taxonInfo>
+     <mcp:taxonInfo>
+       <dwc:Taxon xmlns:dwc="http://rs.tdwg.org/dwc/terms/>
+         <dwc:taxonID>urn:lsid:biodiversity.org.au:afd.taxon:ba90a132-1584-4ec9-8d1c-07c29f6b4895</dwc:taxonID>
+         <dwc:scientificName>Hyperoglyphe antarctica (Carmichael, 1818)</dwc:scientificName>
+         <dwc:vernacularName>Deep-sea Trevalla</dwc:vernacularName>
+         <dwc:vernacularName>Blue-eye</dwc:vernacularName>
+         <dwc:vernacularName>Blue-eye Cod</dwc:vernacularName>
+         <dwc:vernacularName>Blue-nose</dwc:vernacularName>
+         <dwc:vernacularName>Big-eye Trevalla</dwc:vernacularName>
+         <dwc:vernacularName>Griffin's Silverfish</dwc:vernacularName>
+         <dwc:vernacularName>Stoney-eye</dwc:vernacularName>
+         <dwc:vernacularName>Bream Trevalla</dwc:vernacularName>
+         <dwc:vernacularName>Deepsea Trevalla</dwc:vernacularName>
+         <dwc:vernacularName>Blue Eye</dwc:vernacularName>
+         <dwc:vernacularName>Trevalla</dwc:vernacularName>
+         <dwc:vernacularName>Deep Sea Trevalla</dwc:vernacularName>
+         <dwc:vernacularName>Sea Trevally</dwc:vernacularName>
+         <dwc:vernacularName>Big Eye</dwc:vernacularName>
+         <dwc:vernacularName>Bluenose</dwc:vernacularName>
+         <dwc:vernacularName>Bluenose Warehou</dwc:vernacularName>
+         <dwc:vernacularName>Blue-eye Trevalla</dwc:vernacularName>
+         <dwc:kingdom>Animalia</dwc:kingdom>
+         <dwc:phylum>Chordata</dwc:phylum>
+         <dwc:class>Actinopterygii</dwc:class>
+         <dwc:order>Perciformes</dwc:order>
+         <dwc:family>Centrolophidae</dwc:family>
+         <dwc:genus>Hyperoglyphe</dwc:genus>
+         <dwc:specificEpithet>antarctica</dwc:specificEpithet>
+         <dwc:scientificNameAuthorship>Carmichael, 1818</dwc:scientificNameAuthorship>
+       </dwc:Taxon>
+     </mcp:taxonInfo>
      <mcp:vocabularyListUrl>
-       <gmd:URL>http://biodiversity.org.au/taxon/Physeter%20macrocephalus.xml</gmd:URL>
+       <gmd:URL>http://biodiversity.org.au/taxon/<taxonID>.xml</gmd:URL>
      </mcp:vocabularyListUrl>
      <mcp:presentationUrl>
-       <gmd:URL>http://biodiversity.org.au/taxon/Physeter%20macrocephalus.html</gmd:URL>
+       <gmd:URL>http://biodiversity.org.au/taxon/<taxonID>.html</gmd:URL>
      </mcp:presentationUrl>
    </mcp:TC_Taxon>
  </mcp:taxonomicCoverage>
@@ -298,12 +329,13 @@ Example 2 - XLink'd DwC from an external vocabulary resolver service
 
  <mcp:taxonomicCoverage>
    <mcp:TC_Taxon>
-     <mcp:taxonInfo xlink:href="http://taxonresolver.aodn.org.au/taxonresolver?id=urn:lsid:biodiversity.org.au:afd.taxon:e2705e7a-a83c-4d04-87d3-b793e79671d7&origUrl=http://biodiversity.org.au/taxon/Physeter%20macrocephalus.xml"/>
+     <mcp:taxonInfo xlink:href="http://taxonresolver.aodn.org.au/taxonresolver?id=urn:lsid:biodiversity.org.au:afd.taxon:e2705e7a-a83c-4d04-87d3-b793e79671d7&origUrl=http://biodiversity.org.au/afd.taxon/e2705e7a-a83c-4d04-87d3-b793e79671d7.xml"/>
+     <mcp:taxonInfo xlink:href="http://taxonresolver.aodn.org.au/taxonresolver?id=urn:lsid:biodiversity.org.au:afd.taxon:ba90a132-1584-4ec9-8d1c-07c29f6b4895&origUrl=http://biodiversity.org.au/afd.taxon/ba90a132-1584-4ec9-8d1c-07c29f6b4895.xml"/>
      <mcp:vocabularyListUrl>
-       <gmd:URL>http://biodiversity.org.au/taxon/Physeter%20macrocephalus.xml</gmd:URL>
+       <gmd:URL>http://biodiversity.org.au/afd.taxon/<taxonID>.xml</gmd:URL>
      </mcp:vocabularyListUrl>
      <mcp:presentationUrl>
-       <gmd:URL>http://biodiversity.org.au/taxon/Physeter%20macrocephalus.html</gmd:URL>
+       <gmd:URL>http://biodiversity.org.au/afd.taxon/<taxonID>.html</gmd:URL>
      </mcp:presentationUrl>
    </mcp:TC_Taxon>
  </mcp:taxonomicCoverage>

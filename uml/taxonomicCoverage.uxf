@@ -33,8 +33,8 @@ m2=     0..*</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>80</x>
-      <y>340</y>
+      <x>120</x>
+      <y>330</y>
       <w>370</w>
       <h>250</h>
     </coordinates>
@@ -42,17 +42,17 @@ m2=     0..*</panel_attributes>
 dwc::Taxon
 (see http://rs.tdwg.org/dwc/terms)
 --
-+dwc::taxonID [0..1]: dwc::nonEmptyString
-+dwc::scientificName [0..1]: xs::string
-+dwc::vernacularName [0..1]: xs::string
-+dwc::kingdom [0..1]: xs::string
-+dwc::phylum [0..1]: xs::string
-+dwc::class [0..1]: xs:string
-+dwc::order [0..1]: xs::string
-+dwc::family [0..1]: xs::string
-+dwc::genus [0..1]: xs::string
-+dwc::specificEpithet [0..1]: xs::string
-+dwc::scientificNameAuthorship [0..1]: xs::string 
++dwc::taxonID: dwc::nonEmptyString
++dwc::scientificName: xs::string
++dwc::vernacularName [1..*]: xs::string
++dwc::kingdom: xs::string
++dwc::phylum: xs::string
++dwc::class: xs:string
++dwc::order: xs::string
++dwc::family: xs::string
++dwc::genus: xs::string
++dwc::specificEpithet: xs::string
++dwc::scientificNameAuthorship: xs::string 
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -66,7 +66,7 @@ dwc::Taxon
     </coordinates>
     <panel_attributes>TC_Taxon
 --
-+taxonInfo [0..*]: dwc::Taxon
++taxonInfo [1..*]: dwc::Taxon
 +vocabularyListUrl [0..1]: URL
 +vocabularyListAuthority [0..1]: CI_Citation
 +presentationUrl [0..1]: URL
