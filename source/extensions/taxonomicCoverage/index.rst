@@ -8,7 +8,14 @@ Taxonomic Coverage (mcp:taxonomicCoverage)
 Background
 ----------
 
-Metadata records utilising the MCP which describe biological datasets should ideally be able to encode their taxonomic coverage in a consistent way so as to support predictable metadata and data search, filtering and aggregation operations, and also (where possible) navigation through a consistent hierarchical (tree) structure to find or group metadata records of interest. Currently, neither the base ISO 19115 metadata standard or the Marine Community Profile support such a feature, although one such has been proposed as an extension to ISO 19115 by the U.S. NBII (National Biological Information Infrastructure), see NODC, 2012. Meanwhile Simon Pigot of CSIRO Marine and Atmospheric Research has independently implemented an “informal mechanism” for embedding taxonomic information into extended MCP records for use by the Atlas of Living Australia (ALA) in 2010-11, incorporating information supplied via XLinks from the ALA-sponsored National Species Lists (NSL) project based at the Australian National Botanic Gardens (see Belbin & Pigot, 2010). The purpose of this document is to examine these and other potential solutions in the light of requirements as developed and articulated by relevant parties consulted and make a recommendation as to a potential solution for consideration as an extension to the MCP.
+Metadata records utilising the MCP which describe biological datasets should ideally be able to encode their taxonomic coverage in a consistent way so as to support predictable metadata and data search, filtering and aggregation operations, and also (where possible) navigation through a consistent hierarchical (tree) structure to find or group metadata records of interest. Currently, neither the base ISO19115 metadata standard or the Marine Community Profile support such a feature, although one such has been proposed as an extension to ISO19115 by the U.S. NBII (National Biological Information Infrastructure), see NODC, 2012. Meanwhile Simon Pigot of CSIRO Marine and Atmospheric Research has independently implemented an experimental extension to the MCP for embedding taxonomic information into MCP records. This extension was developed for the Atlas of Living Australia (ALA) and incorporates information supplied from the ALA-sponsored National Species Lists (NSL) project based at the Australian National Botanic Gardens (see Belbin & Pigot, 2010). 
+
+The purpose of this section of the MCP manual is to:
+
+- outline the requirements for taxonomic coverage data in the Marine Community
+- briefly examine the current schemas used for taxonomic coverage data 
+- identify and catalog the relevant services that can deliver this information to the Marine Community
+- develop and refine the experimental extension to the MCP so that it can be adopted as part of the MCP
 
 Requirements
 ------------
@@ -311,7 +318,7 @@ References
 
 - Darwin Core Terms: A quick reference guide, http://rs.tdwg.org/dwc/terms/index.htm
 
-- NODC, 2012. ISO 19115 Geographic information – Metadata – Biological Extensions Workbook. Available online at ftp://ftp.ncddc.noaa.gov/pub/Metadata/Online_ISO_Training/workbooks/BIO_Metadata.pdf
+- NODC, 2012. ISO19115 Geographic information – Metadata – Biological Extensions Workbook. Available online at ftp://ftp.ncddc.noaa.gov/pub/Metadata/Online_ISO_Training/workbooks/BIO_Metadata.pdf
 
 Appendix: Current XML web response formats for the three recommended taxonomic data providers
 ---------------------------------------------------------------------------------------------
