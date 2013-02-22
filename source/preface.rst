@@ -30,7 +30,7 @@ MCP Governance Committee
 
 .. index:: Governance Committee for the MCP
 
-Development of the MCP is done through the `MCP Governance Committee <http://www.aodn.go.au/mcp-governance>`_. The terms of reference, current membership and minutes of previous meetings can all be found on the `MCP Governance Committee wiki site <http://www.aodn.org.au/mcp-governance/wiki/Documentation>`_.
+Development of the MCP is done through the `MCP Governance Committee <http://www.aodn.org.au/mcp-governance>`_. The terms of reference, current membership and minutes of previous meetings can all be found on the `MCP Governance Committee wiki site (registration required) <http://www.aodn.org.au/redmine/projects/mcp-governance/wiki/Documentation>`_.
 
 
 How to read this document

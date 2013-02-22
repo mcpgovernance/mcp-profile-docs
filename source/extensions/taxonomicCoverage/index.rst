@@ -101,7 +101,7 @@ Note: some sources e.g. Catalogue of Life only include “Linnaean” ranks, oth
 
 - Taxon identifier, source details, and a functional URL to the record in the source database, in a cascading set of preferred taxonomy sources – suggested to be:
 
-1. **Australian NSLs (AFD for animals, APC/APNI for plants)** - via http://biodiversity.org.au/, see http://biodiversity.org.au/service/name-search - examples:
+1. **Australian NSLs (AFD for animals, APC/APNI for plants)** - via http://biodiversity.org.au, see http://biodiversity.org.au/service/name-search - examples:
 
 - *Physeter macrocephalus*: “**urn:lsid:biodiversity.org.au:afd.taxon:e2705e7a-a83c-4d04-87d3-b793e79671d7**”
 

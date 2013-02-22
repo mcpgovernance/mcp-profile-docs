@@ -279,7 +279,7 @@ No.  Name                             Domain Code             Definition
 ===  ===============================  ======================  ====================================================================================================================================================================================
 1    commonsType                      CommonsTypeCode         Specifies the type of commons license that will be described by the MD_Commons class
 2    Creative Commons                 001                     Creative Commons license (see http://creativecommons.org)                     
-3    Data Commons                     002                     Data Commons license (see http://bluenet.antcrc.utas.edu.au/datacommons) - possibly deprecated?
+3    Data Commons                     002                     Data Commons license (see http://bluenet3.antcrc.utas.edu.au/datacommons) - possibly deprecated?
 ===  ===============================  ======================  ====================================================================================================================================================================================
 
 Metadata about changes to this codelist

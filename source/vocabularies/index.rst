@@ -65,7 +65,7 @@ An example of how to do this is as follows:
 Geographic Extent Names
 -----------------------
 
-Geographic Extent Names for common Marine regions have been developed for the MCP by the AODCJF Technical Committee. Rather than reproduce that extent name list in this document an online link to the extent name list (in ISO19139 CT_CodelistCatalogue format) can be found `here <http://www.aodn.org.au/mcp-governance/wiki/Documentation>`_.
+Geographic Extent Names for common Marine regions have been developed for the MCP by the AODCJF Technical Committee. Rather than reproduce that extent name list in this document an online link to the extent name list (in ISO19139 CT_CodelistCatalogue format) can be found `here <http://www.aodn.org.au/redmine/projects/mcp-governance/wiki/Documentation>`_.
 
 Geographic Extent Names can be used in the following places in an MCP metadata record:
 
