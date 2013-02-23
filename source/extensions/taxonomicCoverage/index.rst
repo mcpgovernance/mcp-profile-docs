@@ -267,7 +267,7 @@ Example 1 - embedded DwC
  <mcp:taxonomicCoverage>
    <mcp:TC_Taxon>
      <mcp:taxonInfo>
-       <dwc:Taxon xmlns:dwc="http://rs.tdwg.org/dwc/terms/>
+       <dwc:Taxon xmlns:dwc="http://rs.tdwg.org/dwc/terms/">
          <dwc:taxonID>urn:lsid:biodiversity.org.au:afd.taxon:e2705e7a-a83c-4d04-87d3-b793e79671d7</dwc:taxonID>
          <dwc:scientificName>Physeter macrocephalus Linnaeus, 1758</dwc:scientificName>
          <dwc:vernacularName>Sperm Whale</dwc:vernacularName>
@@ -282,7 +282,7 @@ Example 1 - embedded DwC
        </dwc:Taxon>
      </mcp:taxonInfo>
      <mcp:taxonInfo>
-       <dwc:Taxon xmlns:dwc="http://rs.tdwg.org/dwc/terms/>
+       <dwc:Taxon xmlns:dwc="http://rs.tdwg.org/dwc/terms/">
          <dwc:taxonID>urn:lsid:biodiversity.org.au:afd.taxon:ba90a132-1584-4ec9-8d1c-07c29f6b4895</dwc:taxonID>
          <dwc:scientificName>Hyperoglyphe antarctica (Carmichael, 1818)</dwc:scientificName>
          <dwc:vernacularName>Deep-sea Trevalla</dwc:vernacularName>
