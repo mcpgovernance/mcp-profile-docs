@@ -20,10 +20,10 @@ No.   Name                                  XPath
 D1    Citation Title                        mcp:MD_Metadata/gmd:identificationInfo/mcp:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title
 D2    Citation Date                         mcp:MD_Metadata/gmd:identificationInfo/mcp:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:date
 D3    Abstract                              mcp:MD_Metadata/gmd:identificationInfo/mcp:MD_DataIdentification/gmd:abstract
-D5    Language                              mcp:MD_Metadata/gmd:identificationInfo/mcp:MD_DataIdentification/gmd:language
-D6    Topic Category                        mcp:MD_Metadata/gmd:identificationInfo/mcp:MD_DataIdentification/gmd:topicCategory
-D7    Bounding Box                          mcp:MD_Metadata/gmd:identificationInfo/mcp:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox
-D8    Temporal Extent                       mcp:MD_Metadata/gmd:identificationInfo/mcp:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/mcp:EX_TemporalExtent
+D4    Language                              mcp:MD_Metadata/gmd:identificationInfo/mcp:MD_DataIdentification/gmd:language
+D5    Topic Category                        mcp:MD_Metadata/gmd:identificationInfo/mcp:MD_DataIdentification/gmd:topicCategory
+D6    Bounding Box                          mcp:MD_Metadata/gmd:identificationInfo/mcp:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox
+D7    Temporal Extent                       mcp:MD_Metadata/gmd:identificationInfo/mcp:MD_DataIdentification/gmd:extent/gmd:EX_Extent/gmd:geographicElement/mcp:EX_TemporalExtent
 ===   ====================================  ===============================================================================================================================================================================================
 
 *Rationale for making D7 and D8 mandatory*: In earlier versions of the MCP documentation (eg. http://www.aodc.gov.au/files/MarineCommunityProfilev1.4.pdf), D7 and D8 were made conditional on the hierarchyLevel being set to 'dataset'. However the subject (and the title of this section) in previous documentation has always been about 'Metadata Elements for Marine Geographic *Datasets*'. Given that we are referring to 'datasets', this condition would appear to be trivially satisfied and we can safely make elements D7 and D8 mandatory.
