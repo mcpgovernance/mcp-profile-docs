@@ -167,7 +167,7 @@ latex_font_size = '11pt'
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
   ('index', 'MarineCommunityProfileManual.tex', u'Marine Community Profile Manual',
-   u'MarineCommunityProfile', 'manual'),
+   u'Marine Community Profile Governance Committee', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
