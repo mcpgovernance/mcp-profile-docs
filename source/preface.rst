@@ -8,6 +8,7 @@ About the Marine Community Profile (MCP)
 
 This document provides information on the Marine Community :term:`Profile` (hereafter MCP) of :term:`ISO19115`.
 
+
 The MCP was first devised by members of the Technical Committee of the `Australian Oceanographic Data Centre Joint Facility (AODCJF) <http://www.aodc.gov.au/index.php?id=24>`_ in 2006. 
 
 Versions 1.0 to 1.2 of the MCP were based on an :term:`XML` implementation of :term:`ISO19115` devised by Scott Bainbridge at the `Australian Institute of Marine Science <http://www.aims.org.au>`_. Versions 1.3 (and higher - from 2007 onwards) are based on the XML implementation of :term:`ISO19115` set out in the :term:`ISO19139` standard. 
