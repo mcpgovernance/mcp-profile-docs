@@ -62,9 +62,9 @@ No.  Name/Role Name               Definition                                    
 947  DP_InfoType                  Parameter Name or Unit Information                                                    Note 1                    Note 2           Class <<DataType>>                  Lines 948-953
 948  name                         Name of Parameter or Unit (depending on parent)                                       M                         1                CharacterString                     FreeText
 949  type                         Type of Parameter name or Unit name                                                   M                         1                CodeList                            DP_TypeCode
-950  vocabularyListUrl            URL of the parameter/unit vocabulary list/service that includes this name             O                         1                Class                               URL         
-951  vocabularyListAuthority      URL of authority regulating or managing vocabulary list specified at 950              O                         1                Class                               URL         
-952  vocabularyListVersion        Version of the parameter/unit vocabulary list/service that includes this name         O                         1                CharacterString                     FreeText
+950  vocabularyListURL            URL of the parameter/unit vocabulary list/service that includes this name             O                         1                Class                               URL         
+951  vocabularyListVersion        Version of the parameter/unit vocabulary list/service that includes this name         O                         1                CharacterString                     FreeText
+952  vocabularyListAuthority      Citation of authority regulating or managing vocabulary list specified at 950         O                         1                Class                               CI_Citation 
 953  localDefinition              Definition of the parameter/unit name if not available from vocabulary list/service   O                         1                CharacterString                     FreeText
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 
