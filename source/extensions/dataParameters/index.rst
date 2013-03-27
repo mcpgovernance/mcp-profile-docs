@@ -56,6 +56,7 @@ No.  Name/Role Name                       Definition                            
 
 .. index:: mcp:name
 .. index:: mcp:type
+.. index:: mcp:usedInDataset
 .. index:: mcp:vocabularyRelationship
 .. index:: mcp:localDefinition
 .. index:: mcp:DP_Term
@@ -67,7 +68,7 @@ No.  Name/Role Name               Definition                                    
 950  DP_Term                      Container for the description of terms used to express the parameter                                           Note 1                    Note 2           Class <<DataType>>                  Lines 951-954
 951  name                         Name of the term                                                                                               M                         1                CharacterString                     FreeText
 952  type                         Type of term                                                                                                   M                         1                CodeList                            DP_TypeCode
-953  usedinDataset                Flag to indicate whether the parameter is used in the dataset                                                  M                         1                Boolean                                         
+953  usedInDataset                Flag to indicate whether the parameter is used in the dataset                                                  M                         1                Boolean                                         
 953  vocabularyRelationship       Information about relationship between this term and a vocabulary of terms                                     O                         N                Class                               DP_VocabularyRelationship
 954  localDefinition              Definition of the term if not available from a vocabulary service or as extracted from a vocabulary service    O                         1                CharacterString                     FreeText
 ===  ===========================  =============================================================================================================  ========================  ===============  ==================================  ===============================
