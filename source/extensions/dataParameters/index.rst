@@ -33,23 +33,31 @@ Data Dictionary
 .. index:: mcp:parameterMinimumValue
 .. index:: mcp:parameterMaximumValue
 .. index:: mcp:parameterDescription
+.. index:: mcp:parameterDeterminationInstrument
+.. index:: mcp:parameterAnalysisMethod
+.. index:: mcp:platform
 
-===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
-No.  Name/Role Name               Definition                                                                            Condition/ Obligation     Max. Occurrence  Data Type                           Domain
-===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
-940  DP_DataParameters            Container for description of data set data parameters                                 Note 1                    Note 2           Aggregated Class                    Line 68                        
-941  DP_DataParameter             Container for description of a data set parameter                                     Note 1                    Note 2           Class                               Lines 942-946
-942  parameterName                Name of Parameter                                                                     M                         N                Class                               DP_InfoType        
-943  parameterUnits               Units of Parameter                                                                    M                         N                Class                               DP_InfoType        
-944  parameterMinimumValue        Minimum Value of Parameter                                                            O                         1                CharacterString                     FreeText
-945  parameterMaximumValue        Maximum Value of Parameter                                                            O                         1                CharacterString                     FreeText
-946  parameterDescription         Parameter Description                                                                 O                         1                CharacterString                     FreeText
-===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
+===  ===================================  =======================================================================================================  ========================  ===============  ==================================  ===============================
+No.  Name/Role Name                       Definition                                                                                               Condition/ Obligation     Max. Occurrence  Data Type                           Domain
+===  ===================================  =======================================================================================================  ========================  ===============  ==================================  ===============================
+940  DP_DataParameters                    Container for description of data set data parameters                                                    Note 1                    Note 2           Aggregated Class                    Line 68                        
+941  DP_DataParameter                     Container for description of a data set parameter                                                        Note 1                    Note 2           Class                               Lines 942-949
+942  parameterName                        Name of Parameter                                                                                        M                         N                Class                               DP_InfoType        
+943  parameterUnits                       Units of Parameter                                                                                       M                         N                Class                               DP_InfoType        
+944  parameterMinimumValue                Minimum Value of Parameter                                                                               O                         1                CharacterString                     FreeText
+945  parameterMaximumValue                Maximum Value of Parameter                                                                               O                         1                CharacterString                     FreeText
+946  parameterDescription                 Parameter Description                                                                                    O                         1                CharacterString                     FreeText
+947  parameterDeterminationInstrument     Name and information about an instrument used in the determination of an observed or measured parameter  O                         N                Class                               DP_InfoType
+948  parameterAnalysisMethod              Name and information about an analysis used in the determination of an observed or measured parameter    O                         N                Class                               DP_InfoType
+949  platform                             Name and information about a platform used to observe or measure a parameter                             O                         N                Class                               DP_InfoType
+===  ===================================  =======================================================================================================  ========================  ===============  ==================================  ===============================
 
 .. include:: ../common_notes.rst
 
 .. index:: mcp:name
 .. index:: mcp:type
+.. index:: mcp:vocabularyTermUrl
+.. index:: mcp:vocabularyTermDefinitionUrl
 .. index:: mcp:vocabularyListUrl
 .. index:: mcp:vocabularyListVersion
 .. index:: mcp:vocabularyListAuthority
@@ -59,13 +67,16 @@ No.  Name/Role Name               Definition                                    
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 No.  Name/Role Name               Definition                                                                            Condition/ Obligation     Max. Occurrence  Data Type                           Domain
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
-947  DP_InfoType                  Parameter Name or Unit Information                                                    Note 1                    Note 2           Class <<DataType>>                  Lines 948-953
-948  name                         Name of Parameter or Unit (depending on parent)                                       M                         1                CharacterString                     FreeText
-949  type                         Type of Parameter name or Unit name                                                   M                         1                CodeList                            DP_TypeCode
-950  vocabularyListURL            URL of the parameter/unit vocabulary list/service that includes this name             O                         1                Class                               URL         
-951  vocabularyListVersion        Version of the parameter/unit vocabulary list/service that includes this name         O                         1                CharacterString                     FreeText
-952  vocabularyListAuthority      Citation of authority regulating or managing vocabulary list specified at 950         O                         1                Class                               CI_Citation 
-953  localDefinition              Definition of the parameter/unit name if not available from vocabulary list/service   O                         1                CharacterString                     FreeText
+950  DP_InfoType                  Container for the description of terms used to express the parameter                  Note 1                    Note 2           Class <<DataType>>                  Lines 951-969
+951  name                         Name of the term                                                                      M                         1                CharacterString                     FreeText
+952  type                         Type of term                                                                          M                         1                CodeList                            DP_TypeCode
+953  usedinDataset                Flag to indicate whether the parameter is used in the dataset                         M                         1                CodeList                            DP_TypeCode
+954  vocabularyTermUrl            URL identifying the term in the vocabulary                                            C                         1                Class                               URL      
+955  vocabularyTermDefinitionUrl  URL identifying the definiton in the vocabulary                                       O                         1                Class                               URL      
+956  vocabularyListURL            URL of the vocabulary service that provides this term                                 O                         1                Class                               URL         
+957  vocabularyListVersion        Version of the vocabulary that this term belongs to                                   O                         1                CharacterString                     FreeText
+958  vocabularyListAuthority      Citation of authority regulating or managing vocabulary specified at 950              O                         1                Class                               CI_Citation 
+959  localDefinition              Definition of the term if not available from a vocabulary service                     C                         1                CharacterString                     FreeText
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 
 .. include:: ../common_notes.rst
@@ -94,8 +105,11 @@ An XML example of the data parameter package:
               <mcp:usedInDataset>
                 <gco:Boolean>1</gco:Boolean> 
               </mcp:usedInDataset> 
-              <mcp:vocabularyListURL>
+              <mcp:vocabularyTermURL>
                 <gmd:URL>http://www.imos.org.au/vocabserver?code=temperature&vocab=oceanography</gmd:URL> 
+              </mcp:vocabularyListURL> 
+              <mcp:vocabularyListURL>
+                <gmd:URL>http://www.imos.org.au/vocabserver?vocab=oceanography</gmd:URL> 
               </mcp:vocabularyListURL> 
               <mcp:vocabularyListVersion>
                 <gco:CharacterString>3.6</gco:CharacterString> 
@@ -115,11 +129,8 @@ An XML example of the data parameter package:
               <mcp:usedInDataset>
                 <gco:Boolean>1</gco:Boolean> 
               </mcp:usedInDataset> 
-              <mcp:vocabularyListURL>
-                <gmd:URL>http://www.imos.org.au/vocabserver?code=degreescelsius&vocab=uom</gmd:URL> 
-              </mcp:vocabularyListURL> 
-              <mcp:vocabularyListVersion>
-                <gco:CharacterString>4.5</gco:CharacterString> 
+              <mcp:localDefinition>
+                <gco:CharacterString>Degrees celsius according to Anders Celsius ie. the scale is inverted with 0 indicating the boiling point of water and 100 representing the freezing point of water - its our local definition of degrees celsius</gco:CharacterString> 
               </mcp:vocabularyListVersion> 
             </mcp:DP_ParameterUnit>
           </mcp:parameterUnit> 
@@ -144,4 +155,11 @@ Metadata about this package
 - **Date proposed**: 2010
 - **Date accepted by MCP Governance Committee**: 2010
 - **MCP Version**: 1.4 onwards
+- **Brief decription of changes**: Original proposal
+
+- **Proposer**: AODN (Kim Finney, Craig Jones et al)
+- **Date proposed**: March 2013
+- **Date accepted by MCP Governance Committee**: 2010
+- **MCP Version**: 1.5 onwards
+- **Brief decription of changes**: Added mcp:vocabularyTermUrl, mcp:vocabularyTermDefinitionUrl, mcp:parameterDeterminationInstrument, mcp:parameterAnalysisMethod, mcp:platform - to provide more information about platform, analysis methods and instruments used for data parameters and explicit links to vocabulary and vocabulary of definitions
 
