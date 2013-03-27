@@ -17,7 +17,7 @@ The intention of this new package is to address the first two shortcomings and p
 UML
 ---
 
-.. image:: dataParameters_uml.png
+.. image:: dataParameters_uml-2013.png
 
 *UML Diagram of DataParameters package*
 
@@ -42,42 +42,57 @@ No.  Name/Role Name                       Definition                            
 ===  ===================================  =======================================================================================================  ========================  ===============  ==================================  ===============================
 940  DP_DataParameters                    Container for description of data set data parameters                                                    Note 1                    Note 2           Aggregated Class                    Line 68                        
 941  DP_DataParameter                     Container for description of a data set parameter                                                        Note 1                    Note 2           Class                               Lines 942-949
-942  parameterName                        Name of Parameter                                                                                        M                         N                Class                               DP_InfoType        
-943  parameterUnits                       Units of Parameter                                                                                       M                         N                Class                               DP_InfoType        
-944  parameterMinimumValue                Minimum Value of Parameter                                                                               O                         1                CharacterString                     FreeText
-945  parameterMaximumValue                Maximum Value of Parameter                                                                               O                         1                CharacterString                     FreeText
-946  parameterDescription                 Parameter Description                                                                                    O                         1                CharacterString                     FreeText
-947  parameterDeterminationInstrument     Name and information about an instrument used in the determination of an observed or measured parameter  O                         N                Class                               DP_InfoType
-948  parameterAnalysisMethod              Name and information about an analysis used in the determination of an observed or measured parameter    O                         N                Class                               DP_InfoType
-949  platform                             Name and information about a platform used to observe or measure a parameter                             O                         N                Class                               DP_InfoType
+942  parameterName                        Name of Parameter                                                                                        M                         N                Class                               DP_Term        
+943  parameterUnits                       Units of Parameter                                                                                       M                         N                Class                               DP_Term        
+944  parameterMinimumValue                Minimum Value of Parameter                                                                               M                         1                CharacterString                     FreeText
+945  parameterMaximumValue                Maximum Value of Parameter                                                                               M                         1                CharacterString                     FreeText
+946  parameterDescription                 Parameter Description                                                                                    M                         1                CharacterString                     FreeText
+947  parameterDeterminationInstrument     Name and information about an instrument used in the determination of an observed or measured parameter  O                         N                Class                               DP_Term
+948  parameterAnalysisMethod              Name and information about an analysis used in the determination of an observed or measured parameter    O                         N                Class                               DP_Term
+949  platform                             Name and information about a platform used to observe or measure a parameter                             O                         N                Class                               DP_Term
 ===  ===================================  =======================================================================================================  ========================  ===============  ==================================  ===============================
 
 .. include:: ../common_notes.rst
 
 .. index:: mcp:name
 .. index:: mcp:type
-.. index:: mcp:vocabularyTermUrl
-.. index:: mcp:vocabularyTermDefinitionUrl
-.. index:: mcp:vocabularyListUrl
-.. index:: mcp:vocabularyListVersion
-.. index:: mcp:vocabularyListAuthority
+.. index:: mcp:vocabularyRelationship
 .. index:: mcp:localDefinition
+.. index:: mcp:DP_Term
 .. index:: mcp:DP_TypeCode
 
-===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
-No.  Name/Role Name               Definition                                                                            Condition/ Obligation     Max. Occurrence  Data Type                           Domain
-===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
-950  DP_InfoType                  Container for the description of terms used to express the parameter                  Note 1                    Note 2           Class <<DataType>>                  Lines 951-969
-951  name                         Name of the term                                                                      M                         1                CharacterString                     FreeText
-952  type                         Type of term                                                                          M                         1                CodeList                            DP_TypeCode
-953  usedinDataset                Flag to indicate whether the parameter is used in the dataset                         M                         1                CodeList                            DP_TypeCode
-954  vocabularyTermUrl            URL identifying the term in the vocabulary                                            C                         1                Class                               URL      
-955  vocabularyTermDefinitionUrl  URL identifying the definiton in the vocabulary                                       O                         1                Class                               URL      
-956  vocabularyListURL            URL of the vocabulary service that provides this term                                 O                         1                Class                               URL         
-957  vocabularyListVersion        Version of the vocabulary that this term belongs to                                   O                         1                CharacterString                     FreeText
-958  vocabularyListAuthority      Citation of authority regulating or managing vocabulary specified at 950              O                         1                Class                               CI_Citation 
-959  localDefinition              Definition of the term if not available from a vocabulary service                     C                         1                CharacterString                     FreeText
-===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
+===  ===========================  =============================================================================================================  ========================  ===============  ==================================  ===============================
+No.  Name/Role Name               Definition                                                                                                     Condition/ Obligation     Max. Occurrence  Data Type                           Domain
+===  ===========================  =============================================================================================================  ========================  ===============  ==================================  ===============================
+950  DP_Term                      Container for the description of terms used to express the parameter                                           Note 1                    Note 2           Class <<DataType>>                  Lines 951-954
+951  name                         Name of the term                                                                                               M                         1                CharacterString                     FreeText
+952  type                         Type of term                                                                                                   M                         1                CodeList                            DP_TypeCode
+953  usedinDataset                Flag to indicate whether the parameter is used in the dataset                                                  M                         1                Boolean                                         
+953  vocabularyRelationship       Information about relationship between this term and a vocabulary of terms                                     O                         N                Class                               DP_VocabularyRelationship
+954  localDefinition              Definition of the term if not available from a vocabulary service or as extracted from a vocabulary service    O                         1                CharacterString                     FreeText
+===  ===========================  =============================================================================================================  ========================  ===============  ==================================  ===============================
+
+.. include:: ../common_notes.rst
+
+.. index:: mcp:vocabularyTermURL
+.. index:: mcp:vocabularyTermDefinitionURL
+.. index:: mcp:vocabularyListURL
+.. index:: mcp:vocabularyListVersion
+.. index:: mcp:vocabularyListAuthority
+.. index:: mcp:DP_VocabularyRelationship
+
+===  ===========================  =============================================================================================================  ==============  ========  ==================================  ===============================
+No.  Name/Role Name               Definition                                                                                                     Cond/ Oblig     Max. Occ  Data Type                           Domain
+===  ===========================  =============================================================================================================  ==============  ========  ==================================  ===============================
+960  DP_VocabularyRelationship    Container for the description of relationship between this term and                                            Note 1          Note 2    Class <<DataType>>                  Lines 961-967
+961  relationshipType             Type of relationship between term and vocabulary term (from skos)                                              M               1         CodeList                            DP_RelationshipTypeCode
+962  vocabularyTermURL            URL of vocabulary term                                                                                         M               1         Class                               URL      
+963  vocabularyTermDefinitionURL  URL identifying the definition of the vocabulary term                                                          O               1         Class                               URL      
+964  vocabularyTermDefinition     Definition extracted from vocabularyTermDefinitionURL                                                          O               1         CharacterString                     FreeText 
+965  vocabularyListURL            URL of the vocabulary service that provides vocabulary term at 962                                             O               1         Class                               URL         
+966  vocabularyListVersion        Version of the vocabulary that provides vocabulary term at 962                                                 O               1         CharacterString                     FreeText
+966  vocabularyListAuthority      Citation of authority regulating or managing vocabulary specified at 965                                       O               1         Class                               CI_Citation 
+===  ===========================  =============================================================================================================  ==============  ========  ==================================  ===============================
 
 .. include:: ../common_notes.rst
 
@@ -93,7 +108,7 @@ An XML example of the data parameter package:
       <mcp:dataParameter>
         <mcp:DP_DataParameter>
           <mcp:parameterName>
-            <mcp:DP_ParameterName>
+            <mcp:DP_Term>
               <mcp:name>
                 <gco:CharacterString>t</gco:CharacterString> 
               </mcp:name> 
@@ -104,20 +119,29 @@ An XML example of the data parameter package:
               </mcp:type> 
               <mcp:usedInDataset>
                 <gco:Boolean>1</gco:Boolean> 
-              </mcp:usedInDataset> 
-              <mcp:vocabularyTermURL>
-                <gmd:URL>http://www.imos.org.au/vocabserver?code=temperature&vocab=oceanography</gmd:URL> 
-              </mcp:vocabularyListURL> 
-              <mcp:vocabularyListURL>
-                <gmd:URL>http://www.imos.org.au/vocabserver?vocab=oceanography</gmd:URL> 
-              </mcp:vocabularyListURL> 
-              <mcp:vocabularyListVersion>
-                <gco:CharacterString>3.6</gco:CharacterString> 
-              </mcp:vocabularyListVersion> 
-            </mcp:DP_ParameterName> 
+              </mcp:usedInDataset>
+              <mcp:vocabularyRelationship>
+                <mcp:DP_VocabularyRelationship>
+                  <mcp:relationshipType>
+                    <mcp:DP_RelationshipTypeCode
+            codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/resources/Codelist/gmxCodelists.xml#DP_RelationshipTypeCode" 
+            codeListValue="skos:exactmatch">skos:exactmatch</mcp:DP_RelationshipTypeCode>
+                  </mcp:relationshipType>
+                  <mcp:vocabularyTermURL>
+                   <gmd:URL>http://www.imos.org.au/vocabserver?code=temperature&vocab=oceanography</gmd:URL> 
+                  </mcp:vocabularyTermURL> 
+                  <mcp:vocabularyListURL>
+                   <gmd:URL>http://www.imos.org.au/vocabserver?vocab=oceanography</gmd:URL> 
+                  </mcp:vocabularyListURL> 
+                  <mcp:vocabularyListVersion>
+                    <gco:CharacterString>3.6</gco:CharacterString> 
+                  </mcp:vocabularyListVersion> 
+                </mcp:DP_VocabularyRelationship>
+              </mcp:vocabularyRelationship>
+            </mcp:DP_Term> 
           </mcp:parameterName> 
           <mcp:parameterUnit>
-            <mcp:DP_ParameterUnit>
+            <mcp:DP_Term>
               <mcp:name>
                 <gco:CharacterString>degrees celsius</gco:CharacterString> 
               </mcp:name> 
@@ -131,8 +155,8 @@ An XML example of the data parameter package:
               </mcp:usedInDataset> 
               <mcp:localDefinition>
                 <gco:CharacterString>Degrees celsius according to Anders Celsius ie. the scale is inverted with 0 indicating the boiling point of water and 100 representing the freezing point of water - its our local definition of degrees celsius</gco:CharacterString> 
-              </mcp:vocabularyListVersion> 
-            </mcp:DP_ParameterUnit>
+              </mcp:localDefinition> 
+            </mcp:DP_Term>
           </mcp:parameterUnit> 
           <mcp:parameterMinimumValue>
             <gco:CharacterString>0.1</gco:CharacterString> 
@@ -151,15 +175,19 @@ An XML example of the data parameter package:
 Metadata about this package
 ---------------------------
 
+**Change**
+
 - **Proposer**: BlueNet Project (Kate Roberts)
 - **Date proposed**: 2010
 - **Date accepted by MCP Governance Committee**: 2010
 - **MCP Version**: 1.4 onwards
 - **Brief decription of changes**: Original proposal
 
+**Change**
+
 - **Proposer**: AODN (Kim Finney, Craig Jones et al)
 - **Date proposed**: March 2013
 - **Date accepted by MCP Governance Committee**: 2010
 - **MCP Version**: 1.5 onwards
-- **Brief decription of changes**: Added mcp:vocabularyTermUrl, mcp:vocabularyTermDefinitionUrl, mcp:parameterDeterminationInstrument, mcp:parameterAnalysisMethod, mcp:platform - to provide more information about platform, analysis methods and instruments used for data parameters and explicit links to vocabulary and vocabulary of definitions
+- **Brief decription of changes**: Added mcp:vocabularyTermURL, mcp:vocabularyTermDefinitionURL, mcp:vocabularyRelationship, mcp:DP_VocabularyRelationship, mcp:parameterDeterminationInstrument, mcp:parameterAnalysisMethod, mcp:platform - to provide more information about platform, analysis methods and instruments used for data parameters and explicit links to vocabulary and vocabulary of definitions
 
