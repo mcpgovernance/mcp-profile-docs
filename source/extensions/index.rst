@@ -12,5 +12,4 @@ Extensions to ISO19115
     revisionDate/index.rst
     samplingFrequency/index.rst
     temporalExtent/index.rst
-    taxonomicCoverage/index.rst
 
