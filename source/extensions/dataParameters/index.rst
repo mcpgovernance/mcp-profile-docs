@@ -17,7 +17,7 @@ The intention of this new package is to address the first two shortcomings and p
 UML
 ---
 
-.. image:: dataParameters_uml-2013.png
+.. image:: dataParameters_uml.png
 
 *UML Diagram of DataParameters package*
 
@@ -144,7 +144,7 @@ An XML example of the data parameter package:
           <mcp:parameterUnit>
             <mcp:DP_Term>
               <mcp:name>
-                <gco:CharacterString>degrees celsius</gco:CharacterString> 
+                <gco:CharacterString>degrees celsius anders</gco:CharacterString> 
               </mcp:name> 
               <mcp:type>
                 <mcp:DP_TypeCode 
@@ -155,15 +155,15 @@ An XML example of the data parameter package:
                 <gco:Boolean>1</gco:Boolean> 
               </mcp:usedInDataset> 
               <mcp:localDefinition>
-                <gco:CharacterString>Degrees celsius according to Anders Celsius ie. the scale is inverted with 0 indicating the boiling point of water and 100 representing the freezing point of water - its our local definition of degrees celsius</gco:CharacterString> 
+                <gco:CharacterString>Degrees celsius according to Anders Celsius original definition of centigrade ie. 0 indicates the boiling point of water and 100 represents the freezing point of water</gco:CharacterString> 
               </mcp:localDefinition> 
             </mcp:DP_Term>
           </mcp:parameterUnit> 
           <mcp:parameterMinimumValue>
-            <gco:CharacterString>0.1</gco:CharacterString> 
+            <gco:CharacterString>80.5</gco:CharacterString> 
           </mcp:parameterMinimumValue> 
           <mcp:parameterMaximumValue>
-            <gco:CharacterString>22.5</gco:CharacterString> 
+            <gco:CharacterString>97.6</gco:CharacterString> 
           </mcp:parameterMaximumValue> 
           <mcp:parameterDescription>
             <gco:CharacterString>The temperature observed by the CTD on its depth profile</gco:CharacterString> 
