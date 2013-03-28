@@ -9,10 +9,10 @@ Rationale
 ISO19115 has classes for describing the data parameters of coverages (continuously varying data usually represented by grids) and features (usually discrete data represented as points, lines and polygons etc) in the Content Information package (see section A.2.8 of the ISO19115 standard). However, the package does not provide:
 
 - a simple, unified description of data parameters. The metadata author is forced instead to split the description of data parameters between a class for coverages and a separate, related standard for features (ISO19110)
-- a simple way of handling the different aliases that often need to be described when entering metadata about data parameter names
-- vocabulary support for looking up data parameter names where these names have been standardized
+- a simple way of handling the different aliases that often need to be described when entering metadata about data parameter names, instruments, analysis methods and platforms
+- vocabulary support for looking up data parameter names, instruments, analysis methods and platforms 
 
-The intention of this new package is to address the first two shortcomings and provide a basis for the third (vocabulary support) when vocabulary services that provide these parameters are standardized and widely available.
+The intention of this package is to address the first two shortcomings and provide a basis for the third (vocabulary support) when vocabulary services that provide these terms are standardized and widely available.
 
 UML
 ---
@@ -81,6 +81,7 @@ No.  Name/Role Name               Definition                                    
 .. index:: mcp:vocabularyListVersion
 .. index:: mcp:vocabularyListAuthority
 .. index:: mcp:DP_VocabularyRelationship
+.. index:: mcp:DP_RelationshipTypeCode  
 
 ===  ===========================  =============================================================================================================  ==============  ========  ==================================  ===============================
 No.  Name/Role Name               Definition                                                                                                     Cond/ Oblig     Max. Occ  Data Type                           Domain
@@ -144,7 +145,7 @@ An XML example of the data parameter package:
           <mcp:parameterUnit>
             <mcp:DP_Term>
               <mcp:name>
-                <gco:CharacterString>degrees celsius anders</gco:CharacterString> 
+                <gco:CharacterString>degrees celsius</gco:CharacterString> 
               </mcp:name> 
               <mcp:type>
                 <mcp:DP_TypeCode 
@@ -154,16 +155,31 @@ An XML example of the data parameter package:
               <mcp:usedInDataset>
                 <gco:Boolean>1</gco:Boolean> 
               </mcp:usedInDataset> 
-              <mcp:localDefinition>
-                <gco:CharacterString>Degrees celsius according to Anders Celsius original definition of centigrade ie. 0 indicates the boiling point of water and 100 represents the freezing point of water</gco:CharacterString> 
-              </mcp:localDefinition> 
+              <mcp:vocabularyRelationship>
+                <mcp:DP_VocabularyRelationship>
+                  <mcp:relationshipType>
+                    <mcp:DP_RelationshipTypeCode
+            codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/resources/Codelist/gmxCodelists.xml#DP_RelationshipTypeCode" 
+            codeListValue="skos:exactmatch">skos:exactmatch</mcp:DP_RelationshipTypeCode>
+                  </mcp:relationshipType>
+                  <mcp:vocabularyTermURL>
+                   <gmd:URL>http://www.imos.org.au/vocabserver?code=degreescelsius&vocab=oceanography_units</gmd:URL> 
+                  </mcp:vocabularyTermURL> 
+                  <mcp:vocabularyListURL>
+                   <gmd:URL>http://www.imos.org.au/vocabserver?vocab=oceanography_units</gmd:URL> 
+                  </mcp:vocabularyListURL> 
+                  <mcp:vocabularyListVersion>
+                    <gco:CharacterString>2.1</gco:CharacterString> 
+                  </mcp:vocabularyListVersion> 
+                </mcp:DP_VocabularyRelationship>
+              </mcp:vocabularyRelationship>
             </mcp:DP_Term>
           </mcp:parameterUnit> 
           <mcp:parameterMinimumValue>
-            <gco:CharacterString>80.5</gco:CharacterString> 
+            <gco:CharacterString>2.1</gco:CharacterString> 
           </mcp:parameterMinimumValue> 
           <mcp:parameterMaximumValue>
-            <gco:CharacterString>97.6</gco:CharacterString> 
+            <gco:CharacterString>18.2</gco:CharacterString> 
           </mcp:parameterMaximumValue> 
           <mcp:parameterDescription>
             <gco:CharacterString>The temperature observed by the CTD on its depth profile</gco:CharacterString> 
@@ -190,5 +206,5 @@ Metadata about this package
 - **Date proposed**: March 2013
 - **Date accepted by MCP Governance Committee**: 2010
 - **MCP Version**: 1.5 onwards
-- **Brief decription of changes**: Added mcp:vocabularyTermURL, mcp:vocabularyTermDefinitionURL, mcp:vocabularyRelationship, mcp:DP_VocabularyRelationship, mcp:parameterDeterminationInstrument, mcp:parameterAnalysisMethod, mcp:platform - to provide more information about platform, analysis methods and instruments used for data parameters and explicit links to vocabulary and vocabulary of definitions
+- **Brief decription of changes**: Move from describing parameter names and units to parameter terms where terms relate not just to parameter names and unit names, but platforms, analysis methods, instruments etc). Added mcp:vocabularyTermURL, mcp:vocabularyTermDefinitionURL, mcp:vocabularyRelationship, mcp:DP_VocabularyRelationship, mcp:parameterDeterminationInstrument, mcp:parameterAnalysisMethod, mcp:platform - to provide more information about platform, analysis methods and instruments used for data parameters and explicit links to vocabulary and vocabulary of definitions
 
