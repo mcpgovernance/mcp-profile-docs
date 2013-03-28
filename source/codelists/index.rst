@@ -249,11 +249,47 @@ See :ref:`dataParameters` for details.
 ===  ===============================  ======================  ====================================================================================================================================================================================
 No.  Name                             Domain Code             Definition                                                                                                                                                                          
 ===  ===============================  ======================  ====================================================================================================================================================================================
-1    DP_TypeCode                      DPTypeCd                type of parameter or unit                                         
-2    shortName                        001                     the short name by which the parameter or unit is known                        
-3    longName                         002                     the long name by which the parameter or unit is known                     
-4    code                             003                     the code by which the parameter or unit is known     
-5    other                            004                     the parameter or unit is known by this name for some other reason
+1    DP_TypeCode                      DPTypeCd                type of parameter term                                            
+2    shortName                        001                     the short name given to the parameter term                                    
+3    longName                         002                     the long name given to the parameter term                                 
+4    localSynonym                     003                     local synonym for the parameter term                 
+5    localCode                        004                     local code given to the term                                     
+===  ===============================  ======================  ====================================================================================================================================================================================
+
+Metadata about changes to this codelist
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Change 1 - Metadata refers to codes 1-5:       
+
+- **Rationale**: Provide DP_TypeCode with controlled vocabulary.
+- **Proposer**: BlueNet staff (Kate Roberts)
+- **Date proposed**: 2010
+- **Date confirmed by MCP Governance Committee**: 2010
+- **Included in MCP Version**: 1.4 onwards
+
+Change 2 - Metadata refers to codes 1-5:       
+
+- **Rationale**: Move from describing parameter names and units to parameter terms where terms relate not just to parameter names and unit names, but platforms, analysis methods, instruments etc)
+- **Proposer**: AODN (Kim Finney, Craig Jones et. al.)
+- **Date proposed**: March 2013
+- **Date confirmed by MCP Governance Committee**: May 2013
+- **Included in MCP Version**: 1.5 onwards
+
+DP_RelationshipTypeCode
+-----------------------
+
+.. index:: code list for mcp:DP_RelationshipTypeCode
+
+See :ref:`dataParameters` for details.
+
+===  ===============================  ======================  ====================================================================================================================================================================================
+No.  Name                             Domain Code             Definition                                                                                                                                                                          
+===  ===============================  ======================  ====================================================================================================================================================================================
+1    DP_RelationshipTypeCode          DPRelationTypeCd        Type of relationship between a local term and terms from a vocabulary     
+2    skos:exactmatch                  001                     The term from the vocabulary is an exact match for the local term (same as skos:exactmatch in SKOS specification)
+3    skos:closematch                  002                     The term from the vocabulary is not an exact match but a close match to the local term (same as skos:closematch in SKOS specification)
+4    skos:narrowmatch                 003                     The term from the vocabulary is considered to be narrower in definition than the local term (same as skos:narrowmatch in SKOS specification)
+5    skos:broadmatch                  004                     The term from the vocabulary is considered to be broader in definition than the local term (same as skos:broadmatch in SKOS specification)
 ===  ===============================  ======================  ====================================================================================================================================================================================
 
 Metadata about changes to this codelist
@@ -261,11 +297,11 @@ Metadata about changes to this codelist
 
 Metadata refers to codes 1-5:       
 
-- **Rationale**: Provide DP_TypeCode with controlled vocabulary.
-- **Proposer**: BlueNet staff (Kate Roberts)
-- **Date proposed**: 2010
-- **Date confirmed by MCP Governance Committee**: 2010
-- **Included in MCP Version**: 1.4 onwards
+- **Rationale**: Provide DP_RelationshipTypeCode with controlled vocabulary.
+- **Proposer**: AODN (Kim Finney, Craig Jones et. al.)
+- **Date proposed**: March 2013
+- **Date confirmed by MCP Governance Committee**: May 2013
+- **Included in MCP Version**: 1.5 onwards
 
 CommonsTypeCode <<Enumeration>>
 -------------------------------
