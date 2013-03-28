@@ -8,11 +8,12 @@ Rationale
 
 ISO19115 has classes for describing the data parameters of coverages (continuously varying data usually represented by grids) and features (usually discrete data represented as points, lines and polygons etc) in the Content Information package (see section A.2.8 of the ISO19115 standard). However, the package does not provide:
 
-- a simple, unified description of data parameters. The metadata author is forced instead to split the description of data parameters between a class for coverages and a separate, related standard for features (ISO19110)
-- a simple way of handling the different aliases that often need to be described when entering metadata about data parameter names, instruments, analysis methods and platforms
-- vocabulary support for looking up data parameter names, instruments, analysis methods and platforms 
+#. a simple, unified description of data parameters. The metadata author is forced instead to split the description of data parameters between a class for coverages and a separate, related standard for features (ISO19110)
+#. a simple way of handling the different aliases that often need to be described when entering metadata about data parameters 
+#. encapsulation of the data parameter metadata - not just names and units but instruments, analyses and platforms associated with the parameter    
+#. vocabulary support for looking up data parameter terms
 
-The intention of this package is to address the first two shortcomings and provide a basis for the third (vocabulary support) when vocabulary services that provide these terms are standardized and widely available.
+The intention of this package is to address points 1-3 and provide a basis for point 4 when vocabulary services that provide these terms are standardized and more widely available.
 
 UML
 ---
