@@ -38,20 +38,20 @@ Data Dictionary
 .. index:: mcp:parameterAnalysisMethod
 .. index:: mcp:platform
 
-===  ===================================  =======================================================================================================  ========================  ===============  ==================================  ===============================
-No.  Name/Role Name                       Definition                                                                                               Condition/ Obligation     Max. Occurrence  Data Type                           Domain
-===  ===================================  =======================================================================================================  ========================  ===============  ==================================  ===============================
-940  DP_DataParameters                    Container for description of data set data parameters                                                    Note 1                    Note 2           Aggregated Class                    Line 68                        
-941  DP_DataParameter                     Container for description of a data set parameter                                                        Note 1                    Note 2           Class                               Lines 942-949
-942  parameterName                        Name of Parameter                                                                                        M                         N                Class                               DP_Term        
-943  parameterUnits                       Units of Parameter                                                                                       M                         N                Class                               DP_Term        
-944  parameterMinimumValue                Minimum Value of Parameter                                                                               M                         1                CharacterString                     FreeText
-945  parameterMaximumValue                Maximum Value of Parameter                                                                               M                         1                CharacterString                     FreeText
-946  parameterDescription                 Parameter Description                                                                                    M                         1                CharacterString                     FreeText
-947  parameterDeterminationInstrument     Name and information about an instrument used in the determination of an observed or measured parameter  O                         N                Class                               DP_Term
-948  parameterAnalysisMethod              Name and information about an analysis used in the determination of an observed or measured parameter    O                         N                Class                               DP_Term
-949  platform                             Name and information about a platform used to observe or measure a parameter                             O                         N                Class                               DP_Term
-===  ===================================  =======================================================================================================  ========================  ===============  ==================================  ===============================
+===  ===================================  ==============================================================================================================  ========================  ===============  ==================================  ===============================
+No.  Name/Role Name                       Definition                                                                                                      Condition/ Obligation     Max. Occurrence  Data Type                           Domain
+===  ===================================  ==============================================================================================================  ========================  ===============  ==================================  ===============================
+940  DP_DataParameters                    Container for description of data set data parameters                                                           Note 1                    Note 2           Aggregated Class                    Line 68                        
+941  DP_DataParameter                     Container for description of a data set parameter                                                               Note 1                    Note 2           Class                               Lines 942-949
+942  parameterName                        Name of Parameter                                                                                               M                         N                Class                               DP_Term        
+943  parameterUnits                       Units of Parameter                                                                                              M                         N                Class                               DP_Term        
+944  parameterMinimumValue                Minimum Value of Parameter                                                                                      M                         1                CharacterString                     FreeText
+945  parameterMaximumValue                Maximum Value of Parameter                                                                                      M                         1                CharacterString                     FreeText
+946  parameterDescription                 Parameter Description                                                                                           M                         1                CharacterString                     FreeText
+947  parameterDeterminationInstrument     Name and information about an instrument used in the determination of an observed or measured parameter         O                         N                Class                               DP_Term
+948  parameterAnalysisMethod              Name and information about an analysis method used in the determination of an observed or measured parameter    O                         N                Class                               DP_Term
+949  platform                             Name and information about a platform used to observe or measure a parameter                                    O                         N                Class                               DP_Term
+===  ===================================  ==============================================================================================================  ========================  ===============  ==================================  ===============================
 
 .. include:: ../common_notes.rst
 
@@ -70,7 +70,7 @@ No.  Name/Role Name               Definition                                    
 951  name                         Name of the term                                                                                               M                         1                CharacterString                     FreeText
 952  type                         Type of term                                                                                                   M                         1                CodeList                            DP_TypeCode
 953  usedInDataset                Flag to indicate whether the parameter is used in the dataset                                                  M                         1                Boolean                                         
-953  vocabularyRelationship       Information about relationship between this term and a vocabulary of terms                                     O                         N                Class                               DP_VocabularyRelationship
+953  vocabularyRelationship       Information about relationship between this term and term or terms from a vocabulary                           O                         N                Class                               DP_VocabularyRelationship
 954  localDefinition              Definition of the term if not available from a vocabulary service or as extracted from a vocabulary service    O                         1                CharacterString                     FreeText
 ===  ===========================  =============================================================================================================  ========================  ===============  ==================================  ===============================
 
@@ -205,7 +205,7 @@ Metadata about this package
 
 - **Proposer**: AODN (Kim Finney, Craig Jones et al)
 - **Date proposed**: March 2013
-- **Date accepted by MCP Governance Committee**: 2010
+- **Date accepted by MCP Governance Committee**: Not yet accepted
 - **MCP Version**: 1.5 onwards
 - **Brief decription of changes**: Move from describing parameter names and units to parameter terms where terms relate not just to parameter names and unit names, but platforms, analysis methods, instruments etc). Added mcp:vocabularyTermURL, mcp:vocabularyTermDefinitionURL, mcp:vocabularyRelationship, mcp:DP_VocabularyRelationship, mcp:parameterDeterminationInstrument, mcp:parameterAnalysisMethod, mcp:platform - to provide more information about platform, analysis methods and instruments used for data parameters and explicit links to vocabulary and vocabulary of definitions
 
