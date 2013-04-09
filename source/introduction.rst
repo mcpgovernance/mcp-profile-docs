@@ -37,11 +37,12 @@ XML Conventions
 These conventions reuse and extend the conventions set out in the 
 `WMO Core Metadata Profile v1-2 Manual <http://wis.wmo.int/2010/metadata/version_1-2/>`_ by Jeremy Tandy. The conventions are as follows:
 
-- The schema documents (see :term:`XSD`) and codelists for the Marine Community Profile extend those used for ISO19139 and ISO19136. They are available online at http://bluenet3.antcrc.utas.edu.au/mcp-1.4.
+- The schema documents (see :term:`XSD`) and codelists for the Marine Community Profile extend those used for ISO19139 and ISO19136. They are available online at http://schemas.aodn.org.au/mcp-2.0.
 - The schema documents for ISO19139 are included with the MCP schema documents. They are also available from the `ISO TC211 website <http:///www.isotc211.org/2005>`_ (see also :term:`ISO TC211`). 
 - A number of different namespaces are used to separate metadata elements into packages for easier management or to include XML implementations of other standards such as GML. The result is that an MCP metadata record will incorporate multiple namespaces as follows:
 
- - The namespace identifier for mcp shall be: http://bluenet3.antcrc.utas.edu.au/mcp. 
+ - The namespace identifier for mcp shall be: http://schemas.aodn.org.au/mcp-2.0
+ - The namespace identifier for dwc shall be: http://rs.tdwg.org/dwc/terms/ 
  - The namespace identifier for gmd shall be: http://www.isotc211.org/2005/gmd
  - The namespace identifier for gco shall be: http://www.isotc211.org/2005/gco
  - The namespace identifier for gmx shall be: http://www.isotc211.org/2005/gmx
@@ -56,7 +57,8 @@ These conventions reuse and extend the conventions set out in the
 ::
 
  <mcp:MD_Metadata 
-  xmlns:mcp="http://bluenet3.antcrc.utas.edu.au/mcp"
+  xmlns:mcp="http://schemas.aodn.org.au/mcp-2.0"
+  xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
   xmlns:gmd="http://www.isotc211.org/2005/gmd"
   xmlns:gco="http://www.isotc211.org/2005/gco"
   xmlns:gml="http://www.opengis.net/gml"
@@ -65,8 +67,8 @@ These conventions reuse and extend the conventions set out in the
   xmlns:xlink="http://www.w3.org/1999/xlink"
   gco:isoType="gmd:MD_Metadata"
   xsi:schemaLocation="
-    http://bluenet3.antcrc.utas.edu.au/mcp 
-    http://bluenet3.antcrc.utas.edu.au/mcp-1.4/schema.xsd 
+    http://schemas.aodn.org.au/mcp-2.0 
+    http://schemas.aodn.org.au/mcp-2.0/schema.xsd 
     http://www.isotc211.org/2005/gmx
     http://www.isotc211.org/2005/gmx/gmx.xsd">
    (...)
@@ -78,25 +80,25 @@ These conventions reuse and extend the conventions set out in the
 
 .. note:: The example of the complete namespace declaration of an MCP metadata record shown above has explicit namespace prefixes for each namespace used in the document. This is the recommended and preferred practice for MCP metadata records.
 
-- Schemas that use the mcp namespace identifier ``http://bluenet3.antcrc.utas.edu.au/mcp`` are expected to be backwards compatible. MCP schemas with version numbers 1.3, 1.4 and 1.5-experimental all use this namespace and are backwards compatible. This means that a metadata record that validates against MCP schema version 1.3 (for example) should also validate against MCP schema version 1.4. 
-
 MCP XML Schemas (XSDs)
 ----------------------
 
 .. index:: Schema XSDs for the MCP
 
-The schema documents (see :term:`XSD`) and codelists for the Marine Community Profile are available online at http://bluenet3.antcrc.utas.edu.au/mcp-1.4.
+The schema documents (see :term:`XSD`) and codelists for the Marine Community Profile are available online at http://schemas.aodn.org.au/mcp-2.0.
 
-As the MCP is under development and contributing organisations develop and change metadata elements, code lists and content rules, an experimental version of the MCP exists at http://bluenet3.antcrc.utas.edu.au/mcp-1.5-experimental.
+As the MCP is under development and contributing organisations develop and change metadata elements, code lists and content rules, an experimental version of the MCP exists at http://schemas.aodn.org.au/mcp-2.1-experimental.
 
 MCP Implementations
 -------------------
 
-Version 1.4 of the MCP (described by this document) and the experimental 1.5 version of the MCP have been implemented as plugin metadata schemas for version 2.8 of GeoNetwork opensource (see :term:`GeoNetwork`). 
+The following versions of the MCP have been implemented as plugin metadata schemas for version 2.8.x of GeoNetwork opensource (see :term:`GeoNetwork`):
+
+- Version 2.0 (described by this document) 
+- Version 2.1 experimental (this document plus experimental extensions under development by users of the MCP) 
+- Version 1.4  
+- Version 1.5 experimental (=1.4 + experimental extensions) 
 
 .. index:: Implementations of the MCP, GeoNetwork 2.8.x (ANZMEST)
 
 You can obtain a complete release of GeoNetwork version 2.8 with the MCP configured and ready to use in the ANZMEST package of GeoNetwork 2.8 for AU/NZ users at http://anzlicmet.bluenet.utas.edu.au.
-
-
-
