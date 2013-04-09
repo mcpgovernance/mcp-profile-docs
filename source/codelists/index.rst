@@ -273,7 +273,7 @@ Change 2 - Metadata refers to codes 1-5:
 - **Proposer**: AODN (Kim Finney, Craig Jones et. al.)
 - **Date proposed**: March 2013
 - **Date confirmed by MCP Governance Committee**: May 2013
-- **Included in MCP Version**: 1.5 onwards
+- **Included in MCP Version**: 2.0 onwards
 
 DP_RelationshipTypeCode
 -----------------------
@@ -302,7 +302,7 @@ Metadata refers to codes 1-5:
 - **Proposer**: AODN (Kim Finney, Craig Jones et. al.)
 - **Date proposed**: March 2013
 - **Date confirmed by MCP Governance Committee**: May 2013
-- **Included in MCP Version**: 1.5 onwards
+- **Included in MCP Version**: 2.0 onwards
 
 CommonsTypeCode <<Enumeration>>
 -------------------------------
