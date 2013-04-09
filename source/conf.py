@@ -44,9 +44,9 @@ copyright = u'2013 Marine Community Profile Governance Committee'
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '1.5'
+version = '2.0'
 # The full version, including alpha/beta/rc tags.
-release = '1.5 Draft'
+release = '2.0 Draft'
 
 language = 'en'
 

@@ -45,9 +45,9 @@ No.  Name/Role Name                       Definition                            
 941  DP_DataParameter                     Container for description of a data set parameter                                                               Note 1                    Note 2           Class                               Lines 942-949
 942  parameterName                        Name of Parameter                                                                                               M                         N                Class                               DP_Term        
 943  parameterUnits                       Units of Parameter                                                                                              M                         N                Class                               DP_Term        
-944  parameterMinimumValue                Minimum Value of Parameter                                                                                      M                         1                CharacterString                     FreeText
-945  parameterMaximumValue                Maximum Value of Parameter                                                                                      M                         1                CharacterString                     FreeText
-946  parameterDescription                 Parameter Description                                                                                           M                         1                CharacterString                     FreeText
+944  parameterMinimumValue                Minimum Value of Parameter                                                                                      O                         1                CharacterString                     FreeText
+945  parameterMaximumValue                Maximum Value of Parameter                                                                                      O                         1                CharacterString                     FreeText
+946  parameterDescription                 Parameter Description                                                                                           O                         1                CharacterString                     FreeText
 947  parameterDeterminationInstrument     Name and information about an instrument used in the determination of an observed or measured parameter         O                         N                Class                               DP_Term
 948  parameterAnalysisMethod              Name and information about an analysis method used in the determination of an observed or measured parameter    O                         N                Class                               DP_Term
 949  platform                             Name and information about a platform used to observe or measure a parameter                                    O                         N                Class                               DP_Term
@@ -55,7 +55,7 @@ No.  Name/Role Name                       Definition                            
 
 .. include:: ../common_notes.rst
 
-.. index:: mcp:name
+.. index:: mcp:term
 .. index:: mcp:type
 .. index:: mcp:usedInDataset
 .. index:: mcp:vocabularyRelationship
@@ -67,11 +67,11 @@ No.  Name/Role Name                       Definition                            
 No.  Name/Role Name               Definition                                                                                                     Condition/ Obligation     Max. Occurrence  Data Type                           Domain
 ===  ===========================  =============================================================================================================  ========================  ===============  ==================================  ===============================
 950  DP_Term                      Container for the description of terms used to express the parameter                                           Note 1                    Note 2           Class <<DataType>>                  Lines 951-954
-951  name                         Name of the term                                                                                               M                         1                CharacterString                     FreeText
-952  type                         Type of term                                                                                                   M                         1                CodeList                            DP_TypeCode
+951  term                         Word used to describe a thing or express a concept related to data parameter                                   M                         1                CharacterString                     FreeText
+952  type                         Type of term (from codelist)                                                                                   M                         1                CodeList                            DP_TypeCode
 953  usedInDataset                Flag to indicate whether the parameter is used in the dataset                                                  M                         1                Boolean                                         
 953  vocabularyRelationship       Information about relationship between this term and term or terms from a vocabulary                           O                         N                Class                               DP_VocabularyRelationship
-954  localDefinition              Definition of the term if not available from a vocabulary service or as extracted from a vocabulary service    O                         1                CharacterString                     FreeText
+954  localDefinition              Definition of the term if not available from a vocabulary service                                              O                         1                CharacterString                     FreeText
 ===  ===========================  =============================================================================================================  ========================  ===============  ==================================  ===============================
 
 .. include:: ../common_notes.rst
@@ -112,9 +112,9 @@ An XML example of the data parameter package:
         <mcp:DP_DataParameter>
           <mcp:parameterName>
             <mcp:DP_Term>
-              <mcp:name>
+              <mcp:term>
                 <gco:CharacterString>t</gco:CharacterString> 
-              </mcp:name> 
+              </mcp:term> 
               <mcp:type>
                 <mcp:DP_TypeCode 
             codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/resources/Codelist/gmxCodelists.xml#DP_TypeCode" 
@@ -145,9 +145,9 @@ An XML example of the data parameter package:
           </mcp:parameterName> 
           <mcp:parameterUnit>
             <mcp:DP_Term>
-              <mcp:name>
+              <mcp:term>
                 <gco:CharacterString>degrees celsius</gco:CharacterString> 
-              </mcp:name> 
+              </mcp:term> 
               <mcp:type>
                 <mcp:DP_TypeCode 
             codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/resources/Codelist/gmxCodelists.xml#DP_TypeCode"
