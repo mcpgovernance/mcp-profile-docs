@@ -250,10 +250,10 @@ See :ref:`dataParameters` for details.
 No.  Name                             Domain Code             Definition                                                                                                                                                                          
 ===  ===============================  ======================  ====================================================================================================================================================================================
 1    DP_TypeCode                      DPTypeCd                type of parameter term                                            
-2    shortName                        001                     the short name given to the parameter term                                    
-3    longName                         002                     the long name given to the parameter term                                 
-4    localSynonym                     003                     local synonym for the parameter term                 
-5    localCode                        004                     local code given to the term                                     
+2    shortName                        001                     The parameter term is a short name                                            
+3    longName                         002                     The parameter term is a long name                                         
+4    localSynonym                     003                     The parameter term is a local synonym                
+5    localCode                        004                     The parameter term is a local code                               
 ===  ===============================  ======================  ====================================================================================================================================================================================
 
 Metadata about changes to this codelist
@@ -286,7 +286,7 @@ See :ref:`dataParameters` for details.
 ===  ===============================  ======================  ====================================================================================================================================================================================
 No.  Name                             Domain Code             Definition                                                                                                                                                                          
 ===  ===============================  ======================  ====================================================================================================================================================================================
-1    DP_RelationshipTypeCode          DPRelationTypeCd        Type of relationship between a local term and terms from a vocabulary     
+1    DP_RelationshipTypeCode          DPRelationTypeCd        Type of relationship between a local term and term from a vocabulary     
 2    skos:exactmatch                  001                     The term from the vocabulary is an exact match for the local term (same as skos:exactmatch in :term:`SKOS` specification)
 3    skos:closematch                  002                     The term from the vocabulary is not an exact match but a close match to the local term (same as skos:closematch in :term:`SKOS` specification)
 4    skos:narrowmatch                 003                     The term from the vocabulary is considered to be narrower in definition than the local term (same as skos:narrowmatch in :term:`SKOS` specification)
