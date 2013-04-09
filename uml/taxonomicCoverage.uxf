@@ -67,9 +67,9 @@ dwc::Taxon
     <panel_attributes>TC_Taxon
 --
 +taxonInfo [1..*]: dwc::Taxon
-+vocabularyListUrl [0..1]: URL
++vocabularyListURL [0..1]: URL
 +vocabularyListAuthority [0..1]: CI_Citation
-+presentationUrl [0..1]: URL
++presentationURL [0..1]: URL
 </panel_attributes>
     <additional_attributes/>
   </element>

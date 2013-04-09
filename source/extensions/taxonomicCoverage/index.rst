@@ -3,8 +3,6 @@
 Taxonomic Coverage (mcp:taxonomicCoverage)
 ==========================================
 
-.. warning:: This extension is NOT yet approved by the MCP Governance Committee - it is still experimental - if you use it and the specification changes then you will have to adjust your implementation.
-
 Background
 ----------
 
@@ -208,18 +206,18 @@ No.  Name/Role Name               Definition                                    
 
 .. index:: mcp:TC_Taxon
 .. index:: mcp:taxonInfo
-.. index:: mcp:vocabularyListUrl
+.. index:: mcp:vocabularyListURL
 .. index:: mcp:vocabularyListAuthority
-.. index:: mcp:presentationUrl
+.. index:: mcp:presentationURL
 
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 No.  Name/Role Name               Definition                                                                            Condition/ Obligation     Max. Occurrence  Data Type                           Domain
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 972  TC_Taxon                     Container for description of taxonomic data                                           Note 1                    Note 2           Aggregated Class                    Lines 973-976                    
 973  taxonInfo                    Taxonomic Information                                                                 M                         N                Class                               dwc::Taxon  
-974  vocabularyListUrl            URL of vocabulary service or taxonomic ID resolver for resolving dwc::taxonID         O                         1                Class                               URL                
+974  vocabularyListURL            URL of vocabulary service or taxonomic ID resolver for resolving dwc::taxonID         O                         1                Class                               URL                
 975  vocabularyListAuthority      Citation of vocabulary service providing Taxonomic Information                        O                         1                Class                               CI_Citation        
-976  presentationUrl              URL of HTML presentation of dwc::taxonID                                              O                         1                Class                               URL                
+976  presentationURL              URL of HTML presentation of dwc::taxonID                                              O                         1                Class                               URL                
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 
 .. include:: ../common_notes.rst
@@ -269,7 +267,7 @@ Example 1 - embedded DwC
  <mcp:taxonomicCoverage>
    <mcp:TC_Taxon>
      <mcp:taxonInfo>
-       <dwc:Taxon xmlns:dwc="http://rs.tdwg.org/dwc/terms/">
+       <dwc:Taxon>
          <dwc:taxonID>urn:lsid:biodiversity.org.au:afd.taxon:e2705e7a-a83c-4d04-87d3-b793e79671d7</dwc:taxonID>
          <dwc:scientificName>Physeter macrocephalus Linnaeus, 1758</dwc:scientificName>
          <dwc:vernacularName>Sperm Whale</dwc:vernacularName>
@@ -284,7 +282,7 @@ Example 1 - embedded DwC
        </dwc:Taxon>
      </mcp:taxonInfo>
      <mcp:taxonInfo>
-       <dwc:Taxon xmlns:dwc="http://rs.tdwg.org/dwc/terms/">
+       <dwc:Taxon>
          <dwc:taxonID>urn:lsid:biodiversity.org.au:afd.taxon:ba90a132-1584-4ec9-8d1c-07c29f6b4895</dwc:taxonID>
          <dwc:scientificName>Hyperoglyphe antarctica (Carmichael, 1818)</dwc:scientificName>
          <dwc:vernacularName>Deep-sea Trevalla</dwc:vernacularName>
@@ -314,12 +312,12 @@ Example 1 - embedded DwC
          <dwc:scientificNameAuthorship>Carmichael, 1818</dwc:scientificNameAuthorship>
        </dwc:Taxon>
      </mcp:taxonInfo>
-     <mcp:vocabularyListUrl>
+     <mcp:vocabularyListURL>
        <gmd:URL>http://biodiversity.org.au/taxon/<taxonID>.xml</gmd:URL>
-     </mcp:vocabularyListUrl>
-     <mcp:presentationUrl>
+     </mcp:vocabularyListURL>
+     <mcp:presentationURL>
        <gmd:URL>http://biodiversity.org.au/taxon/<taxonID>.html</gmd:URL>
-     </mcp:presentationUrl>
+     </mcp:presentationURL>
    </mcp:TC_Taxon>
  </mcp:taxonomicCoverage>
 
@@ -333,12 +331,12 @@ Example 2 - XLink'd DwC from an external vocabulary resolver service
    <mcp:TC_Taxon>
      <mcp:taxonInfo xlink:href="http://taxonresolver.aodn.org.au/taxonresolver?id=urn:lsid:biodiversity.org.au:afd.taxon:e2705e7a-a83c-4d04-87d3-b793e79671d7&origUrl=http://biodiversity.org.au/afd.taxon/e2705e7a-a83c-4d04-87d3-b793e79671d7.xml"/>
      <mcp:taxonInfo xlink:href="http://taxonresolver.aodn.org.au/taxonresolver?id=urn:lsid:biodiversity.org.au:afd.taxon:ba90a132-1584-4ec9-8d1c-07c29f6b4895&origUrl=http://biodiversity.org.au/afd.taxon/ba90a132-1584-4ec9-8d1c-07c29f6b4895.xml"/>
-     <mcp:vocabularyListUrl>
+     <mcp:vocabularyListURL>
        <gmd:URL>http://biodiversity.org.au/afd.taxon/<taxonID>.xml</gmd:URL>
-     </mcp:vocabularyListUrl>
-     <mcp:presentationUrl>
+     </mcp:vocabularyListURL>
+     <mcp:presentationURL>
        <gmd:URL>http://biodiversity.org.au/afd.taxon/<taxonID>.html</gmd:URL>
-     </mcp:presentationUrl>
+     </mcp:presentationURL>
    </mcp:TC_Taxon>
  </mcp:taxonomicCoverage>
 
@@ -368,7 +366,7 @@ Metadata about this package
 
 **Change**
 
-- **Proposer**: CSIRO Marine and Atmospheric Research (Tony Rees), AODN (Kim Finney)
+- **Proposer**: CSIRO Marine and Atmospheric Research (Tony Rees)
 - **Date proposed**: March 2013
 - **Date accepted by MCP Governance Committee**: Not yet accepted
 - **MCP Version**: 2.0 onwards
