@@ -362,3 +362,14 @@ Appendix: Current XML web response formats for the three recommended taxonomic d
 **2: Catalogue of Life** – example taxon: *Physeter macrocephalus* (source: http://www.catalogueoflife.org/col/webservice?name=Physeter+macrocephalus&response=full) 
 
 **3: World Register of Marine Species**: A worked example is difficult to obtain via http query since the only query method apparently currently supported is SOAP. However see http://www.marinespecies.org/aphia.php?p=soap&wsdl=1
+
+Metadata about this package
+---------------------------
+
+**Change**
+
+- **Proposer**: CSIRO Marine and Atmospheric Research (Tony Rees), AODN (Kim Finney)
+- **Date proposed**: March 2013
+- **Date accepted by MCP Governance Committee**: Not yet accepted
+- **MCP Version**: 2.0 onwards
+- **Brief decription of changes**: Original proposal

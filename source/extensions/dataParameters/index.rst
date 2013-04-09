@@ -71,7 +71,7 @@ No.  Name/Role Name               Definition                                    
 952  type                         Type of term (from codelist)                                                                                   M                         1                CodeList                            DP_TypeCode
 953  usedInDataset                Flag to indicate whether the parameter is used in the dataset                                                  M                         1                Boolean                                         
 953  vocabularyRelationship       Information about relationship between this term and term or terms from a vocabulary                           O                         N                Class                               DP_VocabularyRelationship
-954  localDefinition              Definition of the term if not available from a vocabulary service                                              O                         1                CharacterString                     FreeText
+954  localDefinition              Definition of the term if not related to a term from a vocabulary                                              O                         1                CharacterString                     FreeText
 ===  ===========================  =============================================================================================================  ========================  ===============  ==================================  ===============================
 
 .. include:: ../common_notes.rst
@@ -117,7 +117,7 @@ An XML example of the data parameter package:
               </mcp:term> 
               <mcp:type>
                 <mcp:DP_TypeCode 
-            codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/resources/Codelist/gmxCodelists.xml#DP_TypeCode" 
+            codeList="http://schemas.aodn.org.au/mcp-2.0/resources/Codelist/gmxCodelists.xml#DP_TypeCode" 
             codeListValue="shortName">shortName</mcp:DP_TypeCode> 
               </mcp:type> 
               <mcp:usedInDataset>
@@ -127,7 +127,7 @@ An XML example of the data parameter package:
                 <mcp:DP_VocabularyRelationship>
                   <mcp:relationshipType>
                     <mcp:DP_RelationshipTypeCode
-            codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/resources/Codelist/gmxCodelists.xml#DP_RelationshipTypeCode" 
+            codeList="http://schemas.aodn.org.au/mcp-2.0/resources/Codelist/gmxCodelists.xml#DP_RelationshipTypeCode" 
             codeListValue="skos:exactmatch">skos:exactmatch</mcp:DP_RelationshipTypeCode>
                   </mcp:relationshipType>
                   <mcp:vocabularyTermURL>
@@ -150,7 +150,7 @@ An XML example of the data parameter package:
               </mcp:term> 
               <mcp:type>
                 <mcp:DP_TypeCode 
-            codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/resources/Codelist/gmxCodelists.xml#DP_TypeCode"
+            codeList="http://schemas.aodn.org.au/mcp-2.0/resources/Codelist/gmxCodelists.xml#DP_TypeCode"
             codeListValue="longName">longName</mcp:DP_TypeCode> 
               </mcp:type> 
               <mcp:usedInDataset>
@@ -160,7 +160,7 @@ An XML example of the data parameter package:
                 <mcp:DP_VocabularyRelationship>
                   <mcp:relationshipType>
                     <mcp:DP_RelationshipTypeCode
-            codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/resources/Codelist/gmxCodelists.xml#DP_RelationshipTypeCode" 
+            codeList="http://schemas.aodn.org.au/mcp-2.0/resources/Codelist/gmxCodelists.xml#DP_RelationshipTypeCode" 
             codeListValue="skos:exactmatch">skos:exactmatch</mcp:DP_RelationshipTypeCode>
                   </mcp:relationshipType>
                   <mcp:vocabularyTermURL>
@@ -203,9 +203,9 @@ Metadata about this package
 
 **Change**
 
-- **Proposer**: AODN (Kim Finney, Craig Jones et al)
+- **Proposer**: AODN (Kim Finney, Craig Jones et. al.)
 - **Date proposed**: March 2013
 - **Date accepted by MCP Governance Committee**: Not yet accepted
-- **MCP Version**: 1.5 onwards
+- **MCP Version**: 2.0 onwards
 - **Brief decription of changes**: Move from describing parameter names and units to parameter terms where terms relate not just to parameter names and unit names, but platforms, analysis methods, instruments etc). Added mcp:vocabularyTermURL, mcp:vocabularyTermDefinitionURL, mcp:vocabularyRelationship, mcp:DP_VocabularyRelationship, mcp:parameterDeterminationInstrument, mcp:parameterAnalysisMethod, mcp:platform - to provide more information about platform, analysis methods and instruments used for data parameters and explicit links to vocabulary and vocabulary of definitions
 
