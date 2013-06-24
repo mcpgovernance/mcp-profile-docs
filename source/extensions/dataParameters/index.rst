@@ -39,8 +39,8 @@ No.  Name/Role Name               Definition                                    
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 940  DP_DataParameters            Container for description of data set data parameters                                 Note 1                    Note 2           Aggregated Class                    Line 68                        
 941  DP_DataParameter             Container for description of a data set parameter                                     Note 1                    Note 2           Class                               Lines 942-946
-942  parameterName                Name of Parameter                                                                     M                         N                Class                               DP_Term           
-943  parameterUnits               Units of Parameter                                                                    M                         N                Class                               DP_Term           
+942  parameterName                Name of Parameter                                                                     M                         N                Class                               DP_Info           
+943  parameterUnits               Units of Parameter                                                                    M                         N                Class                               DP_Info           
 944  parameterMinimumValue        Minimum Value of Parameter                                                            M                         1                CharacterString                     FreeText
 945  parameterMaximumValue        Maximum Value of Parameter                                                            M                         1                CharacterString                     FreeText
 946  parameterDescription         Parameter Description                                                                 M                         1                CharacterString                     FreeText
@@ -55,13 +55,13 @@ No.  Name/Role Name               Definition                                    
 .. index:: mcp:vocabularyListVersion
 .. index:: mcp:vocabularyListAuthority
 .. index:: mcp:localDefinition
-.. index:: mcp:DP_Term
+.. index:: mcp:DP_Info
 .. index:: mcp:DP_TypeCode
 
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 No.  Name/Role Name               Definition                                                                            Condition/ Obligation     Max. Occurrence  Data Type                           Domain
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
-947  DP_Term                      Parameter Name or Unit Information                                                    Note 1                    Note 2           Class <<DataType>>                  Lines 948-954
+947  DP_Info                      Parameter Name or Unit Information                                                    Note 1                    Note 2           Class <<DataType>>                  Lines 948-954
 948  name                         Name of Parameter or Unit (depending on parent)                                       M                         1                CharacterString                     FreeText
 949  type                         Type of Parameter name or Unit name                                                   M                         1                CodeList                            DP_TypeCode
 950  usedInDataset                Flag to indicate whether the parameter is used in the dataset                         M                         1                Boolean
