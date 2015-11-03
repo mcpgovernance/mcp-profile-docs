@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="11.5.1">
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
   <zoom_level>10</zoom_level>
   <element>
     <type>com.umlet.element.Class</type>
@@ -63,7 +62,7 @@ m2=     0..*</panel_attributes>
       <x>130</x>
       <y>240</y>
       <w>380</w>
-      <h>170</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>
 DP_DataParameter
@@ -72,7 +71,6 @@ DP_DataParameter
 +parameterUnits [1..*]: DP_Term
 +parameterMinimumValue [0..1]: CharacterString
 +parameterMaximumValue [0..1]: CharacterString
-+parameterDescription [0..1]: CharacterString
 +parameterDeterminationInstrument[0..*]: DP_Term
 +parameterAnalysisMethod[0..*]: DP_Term
 +platform[0..*]: DP_Term
@@ -84,9 +82,9 @@ DP_DataParameter
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>20</x>
-      <y>460</y>
-      <w>410</w>
-      <h>130</h>
+      <y>430</y>
+      <w>430</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes>&lt;&lt;DataType&gt;&gt;
 DP_Term
@@ -94,15 +92,21 @@ DP_Term
 +term: CharacterString
 +type: DP_TypeCode
 +usedInDataset: Boolean
++vocabularyTermURL [0..1]: URL
++vocabularyTermPublisher [0..1]: CI_Citation
++vocabularyServiceURL [0..1]: URL
++vocabularyVersion [0..1]: CharacterString
++vocabularyPublisher [0..1]: CI_Citation
 +vocabularyRelationship [0..*]: DP_VocabularyRelationship
-+localDefinition [0..1]: CharacterString</panel_attributes>
++termDefinition [0..1]: CharacterString
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>440</x>
-      <y>460</y>
+      <x>470</x>
+      <y>430</y>
       <w>130</w>
       <h>110</h>
     </coordinates>
@@ -120,28 +124,24 @@ DP_TypeCode
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>20</x>
-      <y>630</y>
+      <y>690</y>
       <w>370</w>
-      <h>160</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>&lt;&lt;DataType&gt;&gt;
 DP_VocabularyRelationship
 --
 +relationshipType: DP_RelationshipTypeCode
-+vocabularyTermURL: URL
-+vocabularyTermDefinitionURL[0..1]: URL
-+vocabularyTermDefinition[0..1]: CharacterString
-+vocabularyListURL: URL
-+vocabularyListVersion [0..1]: CharacterString
-+vocabularyListAuthority [0..1]: CI_Citation
++relatedTermURL: URL
++relatedTerm: CharacterString
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>400</x>
-      <y>630</y>
+      <x>410</x>
+      <y>690</y>
       <w>190</w>
       <h>110</h>
     </coordinates>

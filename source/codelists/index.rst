@@ -214,9 +214,9 @@ MD_TemporalAggregationUnitCode
 
 See :ref:`temporalExtent` for UML diagram and details of elements that use this code list.
 
-===  ===============================  ======================  ====================================================================================================================================================================================
-No.  Name                             Domain Code             Definition                                                                                                                                                                          
-===  ===============================  ======================  ====================================================================================================================================================================================
+===  ===============================  ======================  ===================================================== ====
+No.  Name                             Domain Code             Definition                                            New 
+===  ===============================  ======================  ===================================================== ====
 1    MD_TemporalAggregationUnitCode   AgUnitCd                temporal aggregation of the resource                                          
 2    day                              001                     aggregation unit is day                                                       
 3    multi-day                        002                     aggregation unit is multi-day                                             
@@ -226,18 +226,28 @@ No.  Name                             Domain Code             Definition
 7    year                             006                     aggregation unit is year           
 8    multi-year                       007                     aggregation unit is multi-year                                                         
 9    none                             008                     aggregation unit is none                                                               
-===  ===============================  ======================  ====================================================================================================================================================================================
+10   three-day                        009                     aggregation unit is three-day                                                                                                           
+11   six-day                          010                     aggregation unit is six-day                                                               
+===  ===============================  ======================  ===================================================== ====
 
 Metadata about changes to this codelist
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Metadata refers to codes 1-9:       
+This metadata refers to codes 1-9:       
 
 - **Rationale**: Provide MD_TemporalAggregation with controlled vocabulary.
 - **Proposer**: AODCJF                     
 - **Date proposed**: 2006
 - **Date confirmed by MCP Governance Committee**: 2010
 - **Included in MCP Version**: 1.2 onwards
+
+This metadata refers to codes 10-11:       
+
+- **Rationale**: Allow IMOS satellite data aggregation periods to be differentiated
+- **Proposer**: IMOS (Craig Jones, Kim Finney et. al.)
+- **Date proposed**: 2015
+- **Date confirmed by MCP Governance Committee**: Not yet confirmed
+- **Included in MCP Version**: 2.0 onwards
 
 DP_TypeCode
 -----------

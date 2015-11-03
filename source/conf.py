@@ -166,7 +166,7 @@ latex_font_size = '11pt'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
-  ('index', 'MarineCommunityProfileManual.tex', u'Marine Community Profile Manual',
+  ('index_latex', 'MarineCommunityProfileManual.tex', u'Marine Community Profile Manual',
    u'Marine Community Profile Governance Committee', 'manual'),
 ]
 
@@ -181,6 +181,17 @@ latex_documents = [
 # Additional stuff for the LaTeX preamble.
 #latex_preamble = ''
 
+latex_elements = {
+    'babel': '\\usepackage[english]{babel}',
+    'preamble': '''
+        \\usepackage{hyphenat}
+        \\let\\oldtabulary\\tabulary
+        \\renewcommand{\\tabulary}{\\footnotesize\\oldtabulary}
+        \\usepackage{fancyvrb}
+        \\fvset{fontsize=\\scriptsize}
+        \\RecustomVerbatimEnvironment{verbatim}{Verbatim}{}
+     '''
+}
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []
 

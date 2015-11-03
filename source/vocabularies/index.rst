@@ -28,24 +28,31 @@ An example of how to do this is as follows:
     <gmd:MD_Keywords>
        (...)
        <gmd:type>
-         <gmd:MD_KeywordTypeCode codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/schema/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="discipline">discipline</gmd:MD_KeywordTypeCode>
+         <gmd:MD_KeywordTypeCode
+           codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/schema/resources/
+                     Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+           codeListValue="discipline">discipline</gmd:MD_KeywordTypeCode>
         </gmd:type>
         <gmd:thesaurusName>
             <gmd:CI_Citation>
                 <gmd:title>
-                    <gco:CharacterString>Global Change Master Directory Earth Science Keywords</gco:CharacterString>
+                    <gco:CharacterString>Global Change Master Directory Earth Science Keywords
+                    </gco:CharacterString>
                 </gmd:title>
                 <gmd:date gco:nilReason="unknown"/>
                 <gmd:edition>
-                    <gco:CharacterString>bc44a748-f1a1-4775-9395-a4a6d8bb8df6:conceptscheme:GCMD Keywords, Version 5.3.8</gco:CharacterString>
+                    <gco:CharacterString>bc44a748-f1a1-4775-9395-a4a6d8bb8df6:conceptscheme:GCMD Keywords,
+                       Version 5.3.8</gco:CharacterString>
                 </gmd:edition>
                 <gmd:editionDate gco:nilReason="unknown"/>
                 <gmd:identifier>
                     <gmd:MD_Identifier>
                         <gmd:code>
-                            <gmx:Anchor 
-              xlink:href="http://yourgeonetwork.com/geonetwork/srv/en/?uuid=bc44a748-f1a1-4775-9395-a4a6d8bb8df6">
-                geonetwork.thesaurus.register.discipline.bc44a748-f1a1-4775-9395-a4a6d8bb8df6</gmx:Anchor>
+                            <gmx:Anchor
+                              xlink:href="http://yourgeonetwork.com/geonetwork/srv/en/?uuid=bc44a748-f1a1-
+                                          4775-9395-a4a6d8bb8df6">
+                             geonetwork.thesaurus.register.discipline.bc44a748-f1a1-4775-9395-a4a6d8bb8df6
+                            </gmx:Anchor>
                         </gmd:code>
                     </gmd:MD_Identifier>
                 </gmd:identifier>
