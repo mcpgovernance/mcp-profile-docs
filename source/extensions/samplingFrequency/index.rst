@@ -36,7 +36,8 @@ XML Example
    (...)
    <mcp:samplingFrequency>
      <gmd:MD_MaintenanceFrequencyCode 
-        codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/schema/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode" 
+        codeList="http://bluenet3.antcrc.utas.edu.au/mcp-1.4/schema/resources/Codelist/gmxCodelists.xml
+                  #MD_MaintenanceFrequencyCode" 
         codeListValue="annually">annually</gmd:MD_MaintenanceFrequencyCode>
     </mcp:samplingFrequency>
   </mcp:MD_DataIdentification>
