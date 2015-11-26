@@ -104,13 +104,13 @@ As the MCP is under development and contributing organisations develop and chang
 MCP Implementations
 -------------------
 
-The following versions of the MCP have been implemented as plugin metadata schemas for version 2.8.x of GeoNetwork opensource (see :term:`GeoNetwork`):
+The following versions of the MCP have been implemented as plugin metadata schemas for version 2.10.x of GeoNetwork opensource (see :term:`GeoNetwork`):
 
 - Version 2.0 (described by this document) 
 - Version 2.1 experimental (this document plus experimental extensions under development by users of the MCP) 
 - Version 1.4  
 - Version 1.5 experimental (=1.4 + experimental extensions) 
 
-.. index:: Implementations of the MCP, GeoNetwork 2.8.x (ANZMEST)
+.. index:: Implementations of the MCP, GeoNetwork 2.10.x (ANZMEST)
 
-You can obtain a complete release of GeoNetwork version 2.8 with the MCP configured and ready to use in the ANZMEST package of GeoNetwork 2.8 for AU/NZ users at http://anzlicmet.bluenet.utas.edu.au.
+You can obtain a complete release of GeoNetwork version 2.10.x with the MCP configured and ready to use in the ANZMEST package of GeoNetwork 2.10.x for AU/NZ users at http://sourceforge.net/projects/anzmest. A beta release of the ANZMEST package of GeoNetwork 3.1.x can be built by cloning and building the develop branch from the github repository at http://github.com/anzmest. An installer release of 3.1.x with MCP 2.0 will be available from the sourceforge site from December 2015.
