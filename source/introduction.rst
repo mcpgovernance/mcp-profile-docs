@@ -80,6 +80,18 @@ These conventions reuse and extend the conventions set out in the
 
 .. note:: The example of the complete namespace declaration of an MCP metadata record shown above has explicit namespace prefixes for each namespace used in the document. This is the recommended and preferred practice for MCP metadata records.
 
+- Codelist elements from the mcp namespace should use the appropriate URL for the codeList attribute. For mcp elements the codelist URL is http://schemas.aodn.org.au/mcp-2.0/schema/resources/Codelist/gmxCodelists.xml. The name of the codelist element should be attached to the URL. For example, for the codelist element, mcp:MD_TemporalAggregationUnitCode, the codelist URL must be: http://schemas.aodn.org.au/mcp-2.0/schema/resources/Codelist/gmxCodelists.xml#MD_TemporalAggregationUnitCode. An example of a codelist element from an MCP metadata record is:
+
+::
+ 
+ <mcp:MD_TemporalAggregationUnitCode 
+    codeList="http://schemas.aodn.org.au/mcp-2.0/schema/resources/Codelist/gmxCodelists.xml#MD_TemporalAggregationUnitCode"
+    codeListValue="multi-day">multi-day</mcp:MD_TemporalAggregationUnitCode>
+
+*Example of a codelist element from an MCP 2.0 metadata record*
+
+- Codelist elements from other namespaces such as those with the gmd prefix can use either the mcp codelist URL http://schemas.aodn.org.au/mcp-2.0/schema/resources/Codelist/gmxCodelists.xml or one of the official ISO19115/19139 codelist URLs: http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml. It is preferable to use the official ISO19115/19139 codelist URL.
+
 MCP XML Schemas (XSDs)
 ----------------------
 
