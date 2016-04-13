@@ -179,7 +179,7 @@ An XML example of the data parameter package:
                     <mcp:DP_RelationshipTypeCode
                       codeList="http://schemas.aodn.org.au/mcp-2.0/resources/Codelist/gmxCodelists.xml#DP_Re
                                 lationshipTypeCode"
-                      codeListValue="skos:exactMatch">skos:closeMatch</mcp:DP_RelationshipTypeCode>
+                      codeListValue="skos:exactmatch">skos:exactmatch</mcp:DP_RelationshipTypeCode>
                   </mcp:relationshipType>
                   <mcp:relatedTermURL>
                     <gmd:URL>http://gcmdservices.gsfc.nasa.gov/kms/concept/61594015-4ab4-4b38-ae4f-e31a4757b
