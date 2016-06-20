@@ -39,36 +39,33 @@ No.  Name/Role Name               Definition                                    
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 940  DP_DataParameters            Container for description of data set data parameters                                 Note 1                    Note 2           Aggregated Class                    Line 68                        
 941  DP_DataParameter             Container for description of a data set parameter                                     Note 1                    Note 2           Class                               Lines 942-946
-942  parameterName                Name of Parameter                                                                     M                         N                Class                               DP_Term           
-943  parameterUnits               Units of Parameter                                                                    M                         N                Class                               DP_Term           
-944  parameterMinimumValue        Minimum Value of Parameter                                                            M                         1                CharacterString                     FreeText
-945  parameterMaximumValue        Maximum Value of Parameter                                                            M                         1                CharacterString                     FreeText
-946  parameterDescription         Parameter Description                                                                 M                         1                CharacterString                     FreeText
+942  parameterName                Name of Parameter                                                                     M                         N                Class                               DP_InfoType        
+943  parameterUnits               Units of Parameter                                                                    M                         N                Class                               DP_InfoType        
+944  parameterMinimumValue        Minimum Value of Parameter                                                            O                         1                CharacterString                     FreeText
+945  parameterMaximumValue        Maximum Value of Parameter                                                            O                         1                CharacterString                     FreeText
+946  parameterDescription         Parameter Description                                                                 O                         1                CharacterString                     FreeText
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 
 .. include:: ../common_notes.rst
 
 .. index:: mcp:name
 .. index:: mcp:type
-.. index:: mcp:usedInDataset
 .. index:: mcp:vocabularyListUrl
 .. index:: mcp:vocabularyListVersion
 .. index:: mcp:vocabularyListAuthority
 .. index:: mcp:localDefinition
-.. index:: mcp:DP_Term
 .. index:: mcp:DP_TypeCode
 
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 No.  Name/Role Name               Definition                                                                            Condition/ Obligation     Max. Occurrence  Data Type                           Domain
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
-947  DP_Term                      Parameter Name or Unit Information                                                    Note 1                    Note 2           Class <<DataType>>                  Lines 948-954
+947  DP_InfoType                  Parameter Name or Unit Information                                                    Note 1                    Note 2           Class <<DataType>>                  Lines 948-953
 948  name                         Name of Parameter or Unit (depending on parent)                                       M                         1                CharacterString                     FreeText
 949  type                         Type of Parameter name or Unit name                                                   M                         1                CodeList                            DP_TypeCode
-950  usedInDataset                Flag to indicate whether the parameter is used in the dataset                         M                         1                Boolean
-951  vocabularyListURL            URL of the parameter/unit vocabulary list/service that includes this name             O                         1                Class                               URL         
-952  vocabularyListVersion        Version of the parameter/unit vocabulary list/service that includes this name         O                         1                CharacterString                     FreeText
-953  vocabularyListAuthority      Citation of authority regulating or managing vocabulary list specified at 950         O                         1                Class                               CI_Citation 
-954  localDefinition              Definition of the parameter/unit name if not available from vocabulary list/service   O                         1                CharacterString                     FreeText
+950  vocabularyListURL            URL of the parameter/unit vocabulary list/service that includes this name             O                         1                Class                               URL         
+951  vocabularyListVersion        Version of the parameter/unit vocabulary list/service that includes this name         O                         1                CharacterString                     FreeText
+952  vocabularyListAuthority      Citation of authority regulating or managing vocabulary list specified at 950         O                         1                Class                               CI_Citation 
+953  localDefinition              Definition of the parameter/unit name if not available from vocabulary list/service   O                         1                CharacterString                     FreeText
 ===  ===========================  ====================================================================================  ========================  ===============  ==================================  ===============================
 
 .. include:: ../common_notes.rst
