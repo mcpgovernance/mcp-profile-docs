@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>100</x>
+      <y>10</y>
+      <w>410</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>MD_DataIdentification
+(from ISO Data Identification entity set information)
+--
++samplingFrequency: MD_MaintenanceFrequencyCode
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>210</x>
+      <y>50</y>
+      <w>174</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
+r2= +taxonomicCoverage
+m2=     0..*</panel_attributes>
+    <additional_attributes>90;30;90;140</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>120</x>
+      <y>330</y>
+      <w>370</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DataType&gt;&gt;
+dwc::Taxon
+(see http://rs.tdwg.org/dwc/terms)
+--
++dwc::taxonID: dwc::nonEmptyString
++dwc::scientificName: xs::string
++dwc::vernacularName [0..*]: xs::string
++dwc::kingdom: xs::string
++dwc::phylum: xs::string
++dwc::class: xs:string
++dwc::order: xs::string
++dwc::family: xs::string
++dwc::genus: xs::string
++dwc::specificEpithet: xs::string
++dwc::scientificNameAuthorship: xs::string 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>120</x>
+      <y>190</y>
+      <w>370</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>TC_Taxon
+--
++taxonInfo [1..*]: dwc::Taxon
++vocabularyListUrl [0..1]: URL
++vocabularyListAuthority [0..1]: CI_Citation
++presentationUrl [0..1]: URL
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
