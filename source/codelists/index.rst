@@ -297,10 +297,10 @@ See :ref:`dataParameters` for details.
 No.  Name                             Domain Code             Definition                                                                                                                                                                          
 ===  ===============================  ======================  ====================================================================================================================================================================================
 1    DP_RelationshipTypeCode          DPRelationTypeCd        Type of relationship between a local term and term from a vocabulary     
-2    skos:exactmatch                  001                     The term from the vocabulary is an exact match for the local term (same as skos:exactmatch in :term:`SKOS` specification)
-3    skos:closematch                  002                     The term from the vocabulary is not an exact match but a close match to the local term (same as skos:closematch in :term:`SKOS` specification)
-4    skos:narrowmatch                 003                     The term from the vocabulary is considered to be narrower in definition than the local term (same as skos:narrowmatch in :term:`SKOS` specification)
-5    skos:broadmatch                  004                     The term from the vocabulary is considered to be broader in definition than the local term (same as skos:broadmatch in :term:`SKOS` specification)
+2    skos:exactMatch                  001                     The term from the vocabulary is an exact match for the local term (same as skos:exactMatch in :term:`SKOS` specification)
+3    skos:closeMatch                  002                     The term from the vocabulary is not an exact match but a close match to the local term (same as skos:closeMatch in :term:`SKOS` specification)
+4    skos:narrowMatch                 003                     The term from the vocabulary is considered to be narrower in definition than the local term (same as skos:narrowMatch in :term:`SKOS` specification)
+5    skos:broadMatch                  004                     The term from the vocabulary is considered to be broader in definition than the local term (same as skos:broadMatch in :term:`SKOS` specification)
 ===  ===============================  ======================  ====================================================================================================================================================================================
 
 Metadata about changes to this codelist

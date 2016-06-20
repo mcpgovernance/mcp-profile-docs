@@ -148,10 +148,10 @@ DP_VocabularyRelationship
     <panel_attributes>&lt;&lt;CodeList&gt;&gt;
 DP_RelationshipTypeCode
 --
-+skos:exactmatch
-+skos:closematch
-+skos:narrowmatch
-+skos:broadmatch
++skos:exactMatch
++skos:closeMatch
++skos:narrowMatch
++skos:broadMatch
 </panel_attributes>
     <additional_attributes/>
   </element>
