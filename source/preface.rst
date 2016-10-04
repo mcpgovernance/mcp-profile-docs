@@ -13,6 +13,8 @@ The MCP was first devised by members of the Technical Committee of the `Australi
 
 Versions 1.0 to 1.2 of the MCP were based on an :term:`XML` implementation of :term:`ISO19115` devised by Scott Bainbridge at the `Australian Institute of Marine Science <http://www.aims.org.au>`_. Versions 1.3 (and higher - from 2007 onwards) are based on the XML implementation of :term:`ISO19115` set out in the :term:`ISO19139` standard. 
 
+In December 2008 the MCP Governance Committee agreed to add DataParameters to mcp:MD_DataIndentification and added Data Commons as a substitute for gmd:MD_Constraints. Craig Jones, in May 2010 added dataObject to gmd:MD_ScopeCode code list.  Simon Pigot, in March 2013 made a number of version 2.0 changes: added mcp:taxonomicCoverage and mcp:dataParameter. Julian Atkinson, in January 2016 made updates to previous version 2.0 changes - mainly to the mcp:dataParameter element after the Nov 2015 MCP 2.0 ratification. Note MCP 2.0 is no longer a draft, but a ratified community standard.
+
 One of the first implementations of the MCP using the :term:`GeoNetwork` Opensource software was done as part of the `Australian marine science data network (BlueNet) project <http://www.bluenet.org.au>`_ which was funded by the Department of Education, Science and Training (DEST) of the Australian Government. Since then, the MCP usually implemented in GeoNetwork, is used by other members of the AODCJF, including:
 
 - `Australian Bureau of Meteorology <http://www.bom.gov.au>`_
@@ -31,8 +33,8 @@ MCP Governance Committee
 
 .. index:: Governance Committee for the MCP
 
-Development of the MCP is done through the `MCP Governance Committee <http://www.aodn.org.au/mcp-governance>`_. The terms of reference, current membership and minutes of previous meetings can all be found on the `MCP Governance Committee wiki site (registration required) <http://www.aodn.org.au/redmine/projects/mcp-governance/wiki/Documentation>`_.
-
+Development of the MCP is done through the `MCP Governance Committee <https://sites.google.com/site/aodntag/working-groups/mcp>`_. The terms of reference, current membership and minutes of previous meetings can all be found on the `MCP Governance Committee wiki site (registration required) <http://www.aodn.org.au/redmine/projects/mcp-governance/wiki/Documentation>`_.
+Note this wiki site, whilst still available, has been retired in favour of the AODN TAG MCP Working Group forum pages (at:  https://sites.google.com/site/aodntag/working-groups/mcp).
 
 How to read this document
 -------------------------
@@ -54,7 +56,7 @@ This documentation (unlike the ISO standards!) is released under a :term:`Creati
 
 You are free to Share (to copy, distribute and transmit) and to Remix (to adapt) the documentation under the following conditions:
 
-- Attribution. You must attribute this documentation to `Marine Community Profile Governance Committee <http://www.aodn.org.au/mcp-governance>`_.
+- Attribution. You must attribute this documentation to `Marine Community Profile Governance Committee.
 
 - Share Alike. If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.
 
@@ -90,4 +92,4 @@ This documentation was written by the Marine Community Profile Governance Commit
 
 The basis for the reStructuredText based documentation used for this document is work done by the `GeoServer <http://geoserver.org>`_ project and the `Sphinx <http://sphinx.pocoo.org/>`_ framework. 
 
-If you have questions or enhancements, please contact the MCP governance committee members at http://www.aodn.org.au/mcp-governance.
+If you have questions or enhancements, please contact the MCP governance committee members at https://sites.google.com/site/aodntag/working-groups/mcp.
